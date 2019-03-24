@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body onload="changeThumbnails(); highlightSize(); highlightThumbnail()">
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href="../../index.html"><img src="../../img/header/logo.png" alt="Whatgeekneeds logo"></a>
+            </div>
+            <div class="header-user-login">
+                <a href="#">
+                    <img src="../../img/header/my_account.png" class="user-icon-image" alt="User icon">
+                    <p>moje konto</p>
+                </a>
+                <button class="hamburger-menu-icon"><img src="../../img/header/hamburger.png" alt="Hamburger menu icon">
+                </button>
+            </div>
+            <div class="header-search-form">
+                <input type="text" id="name" placeholder="Czego szukasz?">
+                <button type="button" class="btnSearch"><img src="../../img/header/search-icon.png" alt=""> Szukaj</button>
+            </div>
+        </div>
+        <nav class="navigation">
+            <div class="navigation-user">
+                <a href="#">
+                    <img src="../../img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
+                    <h3>moje konto</h3>
+                </a>
+                <button class="hamburger-menu-icon-visible"><img src="../../img/header/nav/circle.svg" alt="Hamburger menu icon"></a>
+            </div>
+            <div class="navigation-list">
+                <ul>
+                    <li>
+                    <li><a href="../../all-items.html">Wszystkie produkty</a>
+                        <button class="navigation-list-plus"><img src="../../img/header/nav/cross.png" alt="White cross"></button>
+                        <ul class="navigation-list-products hidden">
+                            <li><a href="#">Gadżety antystresowe</a></li>
+                            <li><a href="#">Kubki</a></li>
+                            <li><a href="#">T-shirty</a></li>
+                            <li><a href="#">Skarpety</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Promocje</a></li>
+                    <li><a href="#">Nowości</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="../../../rules.html">Regulamin</a></li>
+                    <li><a href="../../../contact.html">Kontakt</a></li>
+                    <li><a href="../../../faq.html">Faq</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <div class="item-container">
+            <h1>GADŻET ANTYSTRESOWY</h1>
+            <div class="item-text">
+                <span><a href="../../index.html">Strona główna ></a><a href="/all-items.html">Wszystkie produkty ></a>Gadżet
+                    antytresowy
+                </span>
+            </div>
+            <div class="main-photo">
+                <img src="../../item-pages/gadget-donut/gadget-donut.png" id="current" alt="">
+            </div>
+            <div class="thumbnails">
+                <ul>
+                    <li class="thumbnails_img"><img src="../../img/items/item-page/gadgets-thumbnails/turtle.png"
+                            alt=""></li>
+                    <li class="thumbnails_img"><img src="../../img/items/item-page/gadgets-thumbnails/ghost.png" alt="">
+                    </li>
+                    <li class="thumbnails_img"> <img src="../../img/items/item-page/gadgets-thumbnails/mushroom.png"
+                            alt=""></li>
+                    </ul>
+            </div>
+            <div class="item-price">
+                <p>35 <span>pln</span></p>
+            </div>
+            <div class="item-container-size-variant-span">   
+            <span >Wariant</span>
+            </div>
+            <ul class="item-variants">
+                <li class="size-variant"><a href="#"><img src="../../img/items/item-page/gadgets-thumbnails/mushroom.png" alt="Turtle gadget thumbnail"></a></li>
+                <li class="size-variant"><a href="#"><img src="../../img/items/item-page/gadgets-thumbnails/cube.png"
+                            alt="Cube gadget thumbnail"></a></li>
+                <li class="size-variant"><a href="#"><img
+                            src="../../img/items/item-page/gadgets-thumbnails/mushroom.png"
+                            alt="Mushroom gadget thumbnail"></a></li>
+                <li class="size-variant"><a href="#"><img src="../../img/items/item-page/gadgets-thumbnails/ghost.png"
+                            alt="Ghost gadget thumbnail"></a></li>
+            </ul>
+            <button>Dodaj do koszyka</button>
+            <div class="item-description-container">
+                <h1>Nazwa produktu</h1>
+                <ul class="item-description-list">
+                    <li class="description-list-element">Opis produktu</li>
+                    <li class="description-list-element">Szczegóły</li>
+                    <li class="description-list-element">Tabela rozmiarów</li>
+                </ul>
+                <div class="item-details">
+                    <p>Kilka zdań na temat produktu. Lorem ipsum dolor sit
+                        amet, consecte tur adipiscing elit, sed do eiusmod tem-
+                        por incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco la-
+                        boris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                    <span>Lorem ipsum dolor sit amet, consecte tur adipiscing:</span>
+                    <ul class="item-property">
+                        <li>
+                            <div class="green-circle"></div>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </li>
+                        <li>
+                            <div class="green-circle"></div>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </li>
+                        <li>
+                            <div class="green-circle"></div>
+                            <p>Duis aute irure dolor in reprehenderit in voluptate</p>
+                        </li>
+                    </ul>
+                    <p>Kilka zdań na temat produktu. Lorem ipsum dolor sit
+                        amet, consecte tur adipiscing elit, sed do eiusmod tem-
+                        por incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco la-
+                        boris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                </div>
+
+                <div class="item-details">
+                    <p>Detale-----Kilka zdań na temat produktu. Lorem ipsum dolor sit
+                        amet, consecte tur adipiscing elit, sed do eiusmod tem-
+                        por incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco la-
+                        boris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                </div>
+                <div class="item-details">
+                    <p>Rozmiar----Kilka zdań na temat produktu. Lorem ipsum dolor sit
+                        amet, consecte tur adipiscing elit, sed do eiusmod tem-
+                        por incididunt ut labore et dolore magna aliqua. Ut enim
+                        ad minim veniam, quis nostrud exercitation ullamco la-
+                        boris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <button>Dodaj do koszyka</button>
+            <div class="similiar-items">
+                <span>Podobne produkty</span>
+                <ul class="similiar-items-list">
+                    <li><a href="#">
+                            <div class="item-box"><a href="#">
+                                    <div class="item-image">
+                                        <img src="../../img/items/mug.png" alt="Mug game-over">
+                                    </div>
+                                    <div class="item-name-price">
+                                        <h3>Kubek game over</h3>
+                                        <p>45 <span>pln</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </a> </li>
+                    <li><a href="#">
+                            <div class="item-box"><a href="#">
+                                    <div class="item-image">
+                                        <img src="../../img/items/mug.png" alt="Mug game-over">
+                                    </div>
+                                    <div class="item-name-price">
+                                        <h3>Kubek game over</h3>
+                                        <p>45 <span>pln</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </a> </li>
+                    <li><a href="#">
+                            <div class="item-box"><a href="#">
+                                    <div class="item-image">
+                                        <img src="../../img/items/mug.png" alt="Mug game-over">
+                                    </div>
+                                    <div class="item-name-price">
+                                        <h3>Kubek game over</h3>
+                                        <p>45 <span>pln</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </a> </li>
+                </ul>
+            </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <span class="copyright-text">
+                <p>Copyright 2019 whatgeekneeds.com</p>
+            </span>
+            <span class="social-media">
+                <h3>Social Media:</h3>
+                <a href="#"><img src="../../img/footer/facebook_logo.png" alt="Facebook Logo"></a>
+                <a href="#"><img src="../../img/footer/instagram_logo.png" alt="Instagram Logo"></a>
+            </span>
+        </div>
+    </footer>
+    <script src="../../js/app.js"></script>
+</body>
+
+</html>

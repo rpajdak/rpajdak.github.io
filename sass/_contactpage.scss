@@ -1,0 +1,60 @@
+.contact-container {
+    @include containerRulesForText;
+    margin: 0 9px;
+}
+
+
+
+.contact-text {
+    span {
+        font-size: 9px;
+    }
+
+    a {
+        color: $primary-font-color;
+        font-weight: 600;
+        font-family: "Suprema - Semi Bold";
+        font-size: 9px
+    }
+
+    p {
+        font-family: $secondary-font;
+        font-size: 8px;
+        margin: 10px;
+    }
+}
+
+
+
+.contact-details {
+    font-size: 10px;
+    font-family: "Suprema - Semi Bold";
+    margin: 10px;
+    text-transform: none;
+
+    img {
+        margin-right: 8px;
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin: 12px auto;
+        line-height: 10px;
+    }
+}
+
+img.envelope {
+    height: 10px;
+    width: 13px;
+}
+
+img.phone {
+    height: 13px;
+    width: 13px;
+}
+
+img.pointer {
+    height: 19px;
+    width: 13px;
+}

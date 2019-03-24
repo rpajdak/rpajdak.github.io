@@ -1,0 +1,276 @@
+.item-container,
+.item-description-container {
+    color: #363636;
+    margin: 0 9px;
+
+    h1,
+    span {
+        font-size: 14px;
+        font-family: "Suprema - Semi Bold";
+        font-weight: 400;
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        background-color: #6cda00;
+        margin: 10px auto;
+        color: #ffffff;
+        font-size: 16px;
+        font-family: $secondary-font;
+    }
+}
+
+.item-container-size-variant-span{
+    margin: 6px auto 24px auto;
+    color:$primary-font-color;
+}
+
+.item-text {
+    span {
+        font-size: 6px;
+    }
+
+    a {
+        color: $primary-font-color;
+        font-weight: 600;
+        font-family: "Suprema - Semi Bold";
+        font-size: 8px;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.main-photo {
+    border: 1px solid #f0eeee;
+    margin: 10px auto;
+    width: 100%;
+    height: 300px;
+
+    img {
+        height: 100%;
+    }
+}
+
+.thumbnails {
+    
+    ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 5px;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        li{
+            border: 1px solid #f0eeee;
+        }
+    }
+    
+}
+
+.item-price {
+    color: $primary-font-color;
+    text-align: end;
+    p {
+        font-size: 40px;
+        font-family: $primary-font;
+    }
+
+    span {
+        font-size: 24px;
+        font-family: $primary-font;
+    }
+}
+
+.size {
+    border: 2px solid #f0eeee;
+}
+
+.highlighted {
+    border: 1px solid $light-green !important;
+}
+
+.item-sizes,
+.item-variants {
+    @include flex(space-evenly, center);
+    width: 100%;
+    margin-top:12px;
+    li {
+        width: 60px;
+        height: 60px;
+        @include flex(center, center);
+        color: #999898;
+        font-weight: 800;
+        font-family: $secondary-font;
+        font-size: 32px;
+        border: 1px solid #f0eeee;
+
+        a {
+            @include flex(center, center);
+            margin: 0;
+        }
+    }
+
+}
+
+.item-description-container {
+
+    p {
+        font-size: 8px;
+        color: $primary-font-color;
+        font-family: $secondary-font;
+        margin: auto 10px;
+    }
+
+    span {
+        font-size: 8px;
+        margin-left: 9px;
+    }
+}
+
+.item-description-list {
+    @include flex(space-between, center);
+    width: 100%;
+    margin: 10px auto;
+    border-bottom: 2px solid $dark-green;
+
+    li {
+        text-align: center;
+        font-family: "Suprema - Semi Bold";
+        color: $primary-font-color;
+        font-size: 8px;
+        padding: 6px;
+        margin: 0;
+        padding:6px 0;
+        font-weight: 800;
+        border: 0;
+        width: 33%;
+    }
+
+}
+
+.hide {
+    display: none;
+}
+
+.item-description>ul {
+    border: 0;
+}
+
+.item-property {
+    flex-direction: column;
+    border-bottom: 0;
+
+    li {
+        @include flex(center, center);
+        margin: 10px;
+        font-size: 8px;
+        position: relative;
+    }
+}
+
+.green-circle {
+    width: 8px;
+    height: 8px;
+    background-color: $dark-green;
+    border-radius: 50%;
+}
+
+
+
+.item-description-container li:hover {
+    background-color: $dark-green;
+    color: #ffffff;
+}
+
+
+ul.similiar-items-list {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-between;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+
+    .item-container {
+        h1 {
+            font-size: 24px;
+        }
+    }
+
+    .main-photo {
+        @include flex(center, center);
+        height: 70vh;
+
+        img {
+            width: 50%;
+            height: 80%;
+        }
+    }
+
+
+    .item-text {
+        span {
+            font-size: 12px;
+        }
+
+        a {
+            font-size: 16px;
+        }
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(3, 220px);
+
+    }
+
+    .item-price {
+        p {
+            font-size: 56px;
+
+        }
+
+        span {
+            font-size: 30px;
+        }
+
+    }
+
+    .item-sizes,
+    .item-variants {
+        justify-content: space-evenly;
+
+        li {
+            width: 160px;
+            height: 160px;
+        }
+
+    }
+
+    .item-description-container {
+        p {
+            font-size: 10px;
+        }
+
+        span {
+            font-size: 10px;
+        }
+    }
+
+    .item-description-list {
+
+        li {
+            font-size: 16px;
+        }
+
+    }
+
+
+
+
+
+
+}

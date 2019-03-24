@@ -1,0 +1,33 @@
+// Fonts
+
+@font-face {
+    font-family: "Suprema - Semi Bold";
+    src: url('../fonts/SupremaSemiBold.ttf');
+}
+
+@font-face {
+    font-family: "Suprema";
+    src: url("../fonts/Suprema\ Regular.ttf")
+}
+
+@font-face {
+    font-family: "Suprema - Extra Bold";
+    src: url('../fonts/SupremaExtraBold.ttf');
+}
+
+$primary-font: "Suprema - Extra Bold";
+$secondary-font: "Suprema";
+$semi-bold: "Suprema - Semi Bold";
+// Colors
+$light-green:#6cda00;
+$dark-green:#058325;
+$primary-white: #ffffff;
+$primary-font-color: #363636;
+$input-font-color: #b4b3b3;
+$blog-font-color: #bababa;
+$newsletter-input-bgcol: #a7e966;
+$red-font-color:#e82222;
+// Margin
+$mobile-margin: 0 9px;
+
+//
