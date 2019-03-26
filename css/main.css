@@ -1504,6 +1504,10 @@ img {
   margin: 20px 0 30px 8px;
 }
 
+.price-basket {
+  display: none;
+}
+
 .header-user-login,
 .header-user-login-desktop,
 .navigation-user {
@@ -1833,11 +1837,57 @@ a {
   text-align: center;
   border: 4px solid #f0eeee;
   background-color: #ffffff;
+  position: relative;
 }
 
 .item-box a {
   margin: 0;
   padding: 0;
+}
+
+.item-box-on-hover {
+  display: none;
+}
+
+.item-box:hover {
+  border-color: #6cda00;
+}
+
+.item-box:hover .item-box-on-hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 84%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(108, 218, 0, 0.8);
+}
+
+.item-box:hover .item-box-on-hover button {
+  width: 90%;
+  height: 40px;
+  background-color: #ffffff;
+  margin: 24px auto 18px auto;
+}
+
+.item-box:hover .item-box-on-hover button a {
+  color: #6cda00;
+  font-family: "Suprema - Semi Bold";
+  font-size: 20px;
+}
+
+.item-box:hover .item-name-price {
+  color: white;
+  background-color: #6cda00;
 }
 
 .item-image {
@@ -2334,6 +2384,49 @@ label:before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    grid-template-rows: auto;
+        grid-template-areas: "logo user-login" "logo search";
+    justify-items: flex-end;
+    margin: 0 0 18px 0;
+  }
+  .header-search-form {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: search;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 500px;
+    margin-right: 0;
+  }
+  .header-search-form input {
+    width: 320px;
+  }
+  .header-search-form button {
+    width: 180px;
+  }
+  .header-user-login {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: user-login;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 500px;
+  }
+  .header-user-login p {
+    font-size: 16px;
+    margin-left: 5px;
   }
   .header-logo {
     display: -webkit-box;
@@ -2345,54 +2438,51 @@ label:before {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: logo;
+    width: 100%;
   }
   .header-logo img {
     width: auto;
     height: 80px;
     margin: 0;
   }
+  .hamburger-menu-icon {
+    display: none;
+  }
   .header-user-login-desktop > div {
     width: 100%;
     margin: 10px auto;
   }
-  .header-user-login-desktop {
+  .price-basket {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  .header-user-login-desktop a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .header-user-login-desktop input {
+  .price-basket input {
     background-color: #f0eeee;
     -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
             box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-    padding: 8px;
+    text-align: center;
     color: #b4b3b3;
     font-family: "Suprema - Extra Bold";
     font-weight: 300;
     height: 32px;
-    width: 90px;
-    margin: 0;
-    padding: 0;
+    width: 120px;
+    margin: 0 0 0 6px;
   }
-  .header-user-login-desktop button {
+  .price-basket button {
     color: #ffffff;
-    width: 200px;
+    width: 180px;
     height: 32px;
     background-color: #6cda00;
     display: -webkit-box;
@@ -2406,99 +2496,9 @@ label:before {
             align-items: center;
     margin: auto 0;
   }
-  .header-user-login-desktop button img {
+  .price-basket button img {
     margin-right: 6px;
     width: 30px;
-    height: auto;
-  }
-  .header-user-login-desktop p {
-    font-size: 16px;
-    margin-left: 5px;
-  }
-  .desktop-login-basket {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .price-basket {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .price-basket input {
-    width: 160px;
-    padding-left: 6px;
-  }
-  .price-basket button {
-    font-family: "Suprema - Semi Bold";
-    font-size: 18px;
-  }
-  .header-search-form-desktop {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  .header-search-form-desktop input {
-    width: 66.6%;
-    height: 40px;
-    background-color: #f0eeee;
-    -webkit-box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-            box-shadow: inset 3px 4px 15px 3px rgba(0, 0, 0, 0.05);
-    padding: 8px;
-    color: #b4b3b3;
-    font-family: "Suprema - Extra Bold";
-    font-weight: 300;
-  }
-  .header-search-form-desktop input::-webkit-input-placeholder {
-    color: #b4b3b3;
-    font-family: "Suprema";
-    font-size: 14px;
-  }
-  .header-search-form-desktop input:-ms-input-placeholder {
-    color: #b4b3b3;
-    font-family: "Suprema";
-    font-size: 14px;
-  }
-  .header-search-form-desktop input::-ms-input-placeholder {
-    color: #b4b3b3;
-    font-family: "Suprema";
-    font-size: 14px;
-  }
-  .header-search-form-desktop input::placeholder {
-    color: #b4b3b3;
-    font-family: "Suprema";
-    font-size: 14px;
-  }
-  .header-search-form-desktop button {
-    height: 40px;
-    background-color: #058325;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-family: "Suprema - Semi Bold";
-    font-size: 16px;
-    color: #ffffff;
-  }
-  .header-search-form-desktop button img {
-    width: 25px;
     height: auto;
   }
   /* Navigation on desktop */
@@ -2548,8 +2548,8 @@ label:before {
     z-index: 5;
     text-align: center;
   }
-  li {
-    margin: 0;
+  .main li:last-child {
+    color: red;
   }
   .drop {
     overflow: hidden;
@@ -2611,6 +2611,7 @@ label:before {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    grid-column-gap: 8px;
     margin-top: 30px;
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -2755,13 +2756,8 @@ label:before {
     position: relative;
     font-size: 24px !important;
     line-height: 24px;
-  }
-  .top-product-price-old::before {
-    border-bottom: 2px solid red;
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 40%;
+    -webkit-text-decoration: #e82222 line-through;
+            text-decoration: #e82222 line-through;
   }
   /* Section products list */
   .products-list {
@@ -2807,12 +2803,6 @@ label:before {
     height: auto;
   }
   /* Section hidden on desktop */
-  .header-user-login {
-    display: none;
-  }
-  .header-search-form {
-    display: none;
-  }
   .section-banner-container {
     display: none !important;
   }
