@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
 <body>
@@ -127,8 +129,12 @@
                                 <p class="top-product-price-new">56 <span>pln</span></p>
                             </div>
                         </div>
-                    </a></div>
-            </div>
+                    </a>
+                    <div class="item-box-on-hover">
+                        <button><a href="#">Dodaj do koszyka</a></button>
+                        <button><a href="#">Zobacz więcej</a></button>
+                    </div>
+                </div>
     </section>
     <section>
         <div class="products-list-text">
@@ -256,6 +262,58 @@
         <div class="products-list-text">
             <p>Gadżety antystresowe</p>
         </div>
+        <div class="multiple-items">
+            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                    <div class="item-image">
+                        <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>T-shirt nerd</h3>
+                        <p>69 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                    <div class="item-image">
+                        <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>T-shirt nerd</h3>
+                        <p>69 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                    <div class="item-image">
+                        <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>T-shirt nerd</h3>
+                        <p>69 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                    <div class="item-image">
+                        <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>T-shirt nerd</h3>
+                        <p>69 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+            <div class="item-box"><a href="item-pages/tshirt/tshirt.html">
+                    <div class="item-image">
+                        <img src="item-pages/tshirt/tshirt.png" alt="T-shirt Nerd">
+                    </div>
+                    <div class="item-name-price">
+                        <h3>T-shirt nerd</h3>
+                        <p>69 <span>pln</span></p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </section>
     <section>
         <a href="#">
@@ -300,7 +358,21 @@
             </span>
         </div>
     </footer>
-    <script src="js/app.js"></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.multiple-items').slick({
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 3,
+            });
+        });
+    </script>
+    <!-- <script src="js/app.js"></script> -->
 </body>
 
 </html>

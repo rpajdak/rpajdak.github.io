@@ -282,7 +282,8 @@ a {
     border: 4px solid #f0eeee;
     background-color: #ffffff;
     position: relative;
-
+    margin-left: 4px;
+    margin-right: 4px;
     a {
         margin: 0;
         padding: 0;
@@ -307,6 +308,7 @@ a {
     top: 0;
     left: 0;
     background-color: rgba(108, 218, 0, 0.8);
+    z-index: 100;
     button {
         width: 90%;
         height: 40px;
@@ -324,6 +326,12 @@ a {
 .item-box:hover .item-name-price {
     color: white;
     background-color: $light-green;
+}
+
+.item-box:hover .top-product-price {
+    p {
+        color: $primary-white;
+    }
 }
 
 .item-image {
@@ -1074,6 +1082,7 @@ label:before {
         height: 40px !important;
         top: 40px;
         left: -7px;
+        z-index: 99;
     }
 
     .item-name-price {
@@ -1161,7 +1170,13 @@ label:before {
         }
 
     }
-
+    .multiple-items{
+        width: 100%;
+        height: 100%;
+    }
+    .multiple-items >div{
+        margin: 0 6px 0 6px;
+    }
     /* Section hidden on desktop */
 
     // .header-user-login {
