@@ -56,12 +56,12 @@
 
 .slick-prev {
     left: 16px;
-    background: center/cover url(../img/arrow.png);
+    background: center/cover url(../img/arrows/prev.png);
 }
 
 .slick-next {
     right: -6px;
-    background: center/cover url(../img/arrow.png);
+    background: center/cover url(../img/arrows/next.png);
 }
 
 /* [dir='rtl'] .slick-prev {
