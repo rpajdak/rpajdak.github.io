@@ -442,14 +442,12 @@ a {
 
 /* Section Newsletter */
 
- /* Hidden on mobile */
+/* Hidden on mobile */
 
-.copyright-text{
-    display: none;
-}
+
 .newsletter-contact,
 .newsletter-bok {
-   display: none !important;
+    display: none;
 }
 
 
@@ -476,17 +474,10 @@ a {
         font-size: 13px;
         color: $light-green;
         text-transform: uppercase;
+        margin-bottom: 12px
     }
 
-    p {
-        font-size: 14px;
-        font-family: "Suprema - Semi Bold";
-        color: #ffffff;
-        display: block;
-        margin: 6px 0 0 9px;
-        padding: 0;
-        width: 100%;
-    }
+
 
     input::placeholder {
         color: #ffffff;
@@ -497,19 +488,25 @@ a {
     width: 100%;
     height: 100%;
     display: flex;
+    position: relative;
 }
 
-.newsletter-wrapper>div {
-    width: 50%;
-    height: 100%;
-    display: flex;
+.newsletter-inputs {
     flex-direction: column;
-    justify-content: center;
-    position: relative;
+    justify-content: flex-end;
+    width: 100%;
+
+    h3 {
+        color: $primary-white;
+        font-size: 12px;
+        width: 180%;
+        margin: 6px 0 0 6px;
+    }
 }
 
 .newsletter-image {
     @include flex(center, center);
+    width: 100%;
 
     img {
         width: 80%;
@@ -522,19 +519,17 @@ a {
     box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.1);
     background-color: $newsletter-input-bgcol;
     font-family: $secondary-font;
-    margin-top: 4px;
-    margin-left: 13px;
+    margin: 6px 13px;
     padding: 8px;
 }
 
 .newsletter-container-checkbox {
-    width: 50%;
     height: 20px;
     margin-top: 5px;
-    margin-left: 13px;
+    margin-left: 16px;
 
     label {
-        width: 180%;
+        width: 100%;
         align-items: center;
         position: relative;
         padding-left: 25px;
@@ -601,8 +596,7 @@ label:before {
 }
 
 .social-media {
-    font-family: $primary-font;
-    font-size: 6px;
+
     height: 100%;
     width: 50%;
     @include flex(flex-end, center);
@@ -610,6 +604,11 @@ label:before {
     img {
         width: 28px;
         height: 28px;
+    }
+
+    h3 {
+        font-family: $primary-font;
+        font-size: 8px;
     }
 
     a {
@@ -733,10 +732,10 @@ label:before {
 
     /* Section newsletter */
     .newsletter-container {
-        height: 224px;
+        height: 240px;
 
-        p {
-            font-size: 24px;
+        h3 {
+            font-size: 22px;
             margin-top: 10px;
         }
 
@@ -774,8 +773,12 @@ label:before {
     }
 
     .social-media {
-        font-size: 20px !important;
+
         margin-right: 8px;
+
+        h3 {
+            font-size: 20px;
+        }
 
         img {
             width: 40px;
@@ -1216,6 +1219,8 @@ label:before {
     }
 
     /* Footer on desktop */
+
+
     .newsletter-container {
         height: auto;
         width: 100%;
@@ -1224,6 +1229,16 @@ label:before {
         background: $light-green;
         display: flex;
         justify-content: center;
+        border-bottom: 1px solid $primary-white;
+        margin-bottom: 12px;
+
+        p {
+            position: relative;
+        }
+
+        button {
+            margin-left: 0;
+        }
     }
 
     .newsletter-wrapper {
@@ -1233,33 +1248,118 @@ label:before {
         grid-column-gap: 2%;
         justify-content: center;
         margin: 0 auto;
-        border: 1px solid red;
+        flex-shrink: 1;
+
+        h3 {
+            font-family: $semi-bold;
+            color: $primary-white;
+            left: 0;
+            font-size: 22px;
+            margin-bottom: 6px;
+        }
     }
 
     .newsletter-image {
         display: none !important;
     }
 
-    .newsletter-inputs {
-        border: 1px solid black;
-        width: 100% !important;
-    }
     .newsletter-inputs,
     .newsletter-contact,
     .newsletter-bok {
+        display: flex;
         width: 100%;
-        border: 1px solid green;
+
     }
 
-    .newsletter-contact img {
-        width: 18px;
-        height: auto;
+    .newsletter-inputs {
+        width: 100% !important;
+
+        input::placeholder {
+            color: $primary-white;
+            font-size: 20px;
+            padding-left: 12px;
+        }
+    }
+
+    .newsletter-input {
+        margin-left: 0;
+    }
+
+    .newsletter-bok {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        a {
+            margin: 12px 0;
+        }
+    }
+
+    .newsletter-contact {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+
+        a {
+            margin-bottom: 6px;
+            line-height: 24px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+
+            img {
+                margin: auto 6px auto 0;
+                width: 24px;
+                height: auto;
+            }
+        }
+
+
+    }
+
+    .newsletter-contact-social-media {
+        display: inline-flex;
+        justify-content: flex-end;
+        margin-right: 15%;
+        margin-bottom: 6px;
+        a {
+            margin-right: 18px;
+        }
+    }
+
+    .newsletter-copyright-text {
+        width: 1200px;
+        position: relative;
+
+        p {
+            font-family: $secondary-font;
+            text-transform: none;
+            font-size: 18px;
+            margin: 6px auto;
+            color: $primary-white;
+            opacity: 0.7;
+        }
+    }
+
+    .newsletter-copyright-text::before,
+    .newsletter-copyright-text::after {
+        position: absolute;
+        content: "";
+        width: 100vw;
+        height: 1px;
+        background-color: #aeeb73;
+        top: 0;
+    }
+
+    .newsletter-copyright-text::after {
+        right: 0;
     }
 
     /* Section Footer */
     .footer-container {
         display: none;
     }
+
 
 
 
