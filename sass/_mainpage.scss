@@ -214,18 +214,18 @@ a {
     border-bottom: 1px solid #aeeb73;
 }
 
-/*Section banner */
-.section-banner-container {
-    margin: 0 9px;
-}
+
 
 /* Section hidden on small devices */
 .slider-top-product {
     display: none;
 }
 
+/*Section banner */
+
 .section-banner-container {
     @include flex(center, center);
+    margin: 0 9px;
 
     a {
         padding: 0;
@@ -805,6 +805,7 @@ label:before {
 
     header {
         height: 160px;
+        margin: 20px auto;
     }
 
 
@@ -919,8 +920,7 @@ label:before {
         @include flex(space-between, center);
         width: 1200px;
         margin: auto 20px;
-        z-index: 4;
-
+        z-index: 999;
         a {
             font-weight: 400;
             font-family: $secondary-font;
@@ -932,16 +932,12 @@ label:before {
         li {
             position: relative;
             width: 20%;
+            height: 50%;
             padding: 15px 0;
             cursor: pointer;
-            z-index: 5;
             text-align: center;
         }
 
-    }
-
-    .main li:last-child {
-        color: red;
     }
 
     .drop {
@@ -952,7 +948,6 @@ label:before {
         width: 100%;
         left: 0;
         top: 35px;
-        z-index: 100;
         margin-top: 15px;
 
         a {
@@ -976,15 +971,21 @@ label:before {
             height: 40px;
         }
     }
-
-
-    @for $i from 1 through 4 {
-        .main li:nth-child(#{$i}) {
-            &:hover ul div {
-                @include transform(translate(0, 10px));
-            }
-        }
+    .main:hover{
+        z-index: 1001;
     }
+    .main li:first-child:hover ul div {
+        z-index: 103;
+        @include transform(translate(0, 10px));
+    }
+
+    // @for $i from 1 through 4 {
+    //     .main li:nth-child(#{$i}) {
+    //         &:hover ul div {
+    //             @include transform(translate(0, 10px));
+    //         }
+    //     }
+    // }
 
     /* Section banner */
 
@@ -992,8 +993,8 @@ label:before {
         height: 500px;
         @include grid(repeat(2, 1fr), auto);
         grid-column-gap: 8px;
-        margin-top: 30px;
-        align-items: flex-end;
+        margin-top: 0;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
@@ -1008,7 +1009,6 @@ label:before {
 
     .slider-container {
         margin: 0 auto;
-        margin-top: 20px;
         position: relative;
         padding-bottom: 38%;
         user-select: none;
@@ -1278,12 +1278,13 @@ label:before {
         input::placeholder {
             color: $primary-white;
             font-size: 20px;
-            padding-left: 12px;
         }
     }
 
     .newsletter-input {
+        font-size: 20px;
         margin-left: 0;
+        padding-left: 24px;
     }
 
     .newsletter-bok {
@@ -1314,8 +1315,6 @@ label:before {
                 height: auto;
             }
         }
-
-
     }
 
     .newsletter-contact-social-media {
@@ -1323,12 +1322,14 @@ label:before {
         justify-content: flex-end;
         margin-right: 15%;
         margin-bottom: 6px;
+
         a {
             margin-right: 18px;
         }
     }
 
     .newsletter-copyright-text {
+        display: block;
         width: 1200px;
         position: relative;
 
