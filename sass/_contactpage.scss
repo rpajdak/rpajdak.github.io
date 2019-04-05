@@ -3,8 +3,6 @@
     margin: 0 9px;
 }
 
-
-
 .contact-text {
     span {
         font-size: 9px;
@@ -44,17 +42,99 @@
     }
 }
 
-img.envelope {
-    height: 10px;
-    width: 13px;
+.contact-details p:last-child {
+    display: none;
 }
+.envelope,
+.phone {
+     height: 13px;
+     width: 13px;
 
-img.phone {
-    height: 13px;
-    width: 13px;
 }
 
 img.pointer {
     height: 19px;
     width: 13px;
+}
+
+.contact-map {
+    display: none;
+}
+
+@media (min-width:992px) {
+    .contact-container {
+        height: auto;
+        width: 1200px;
+        margin: 20px auto;
+        position: relative;
+        display: block;
+        z-index: 1000;
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+    }
+
+    .contact-text {
+        span {
+            font-family: $semi-bold;
+            font-size: 18px;
+            margin-bottom: 22px;
+            display: inline-block;
+            text-transform: none;
+            
+            a {
+                font-size: 18px;
+                font-family: $semi-bold;
+            }
+        }
+        p {
+            font-size:16px
+
+        }
+    }
+
+    .contact-details-desktop {
+        @include flex(space-between, center);
+        height: 40vh;
+        background-color: #f0eeee;
+        position: relative;
+        padding: 20px 30px;
+        margin: 40px 0;
+    }
+    .contact-details{
+        width: 50%;
+        font-size: 22px;
+        p{
+            font-family: $secondary-font;
+            color:$primary-font-color;
+            width: 60%;
+            line-height: 20px;
+        }
+    }
+    .contact-details p:last-child {
+        display: block;
+    }
+    .green-arrow,
+    .envelope,
+    .phone {
+        height: 30px;
+        width: 30px;
+
+    }
+
+    img.pointer {
+        height: 36px;
+        width: 30px;
+    }
+    .contact-map {
+        width: 50%;
+        height: 100%;
+        @include flex(center, center);
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
 }

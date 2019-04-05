@@ -12,23 +12,66 @@
     }
 }
 
-
-
 .rules-text {
     span {
         font-size: 9px;
-    }
-
-    a {
-        color: $primary-font-color;
-        font-weight: 600;
         font-family: "Suprema - Semi Bold";
-        font-size: 9px;
+         a {
+             color: $primary-font-color;
+             font-weight: 600;
+             font-family: "Suprema - Semi Bold";
+             font-size: 9px;
+         }
     }
+.rulespage-back-btn{
+    display: none;
+}
+   
 
     p {
         font-family: $secondary-font;
         font-size: 8px;
         margin: 10px;
+    }
+}
+@media(min-width: 992px){
+    .rules-container{
+           height: auto;
+           width: 1200px;
+           margin: 20px auto;
+           position: relative;
+           display: block;
+           z-index: 1000;
+        h1{
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+    }
+    .rules-text {
+        span {
+            font-family: $semi-bold;
+            font-size: 18px;
+            margin-bottom: 22px;
+            display: inline-block;
+            text-transform: none;
+
+            a {
+                text-transform: none;
+                font-size: 18px;
+                font-family: $semi-bold;
+            }
+        }
+    }
+    .rulespage-back-btn{
+        width: 30%;
+        height: 40px;
+        background-color: $light-green;
+        display: block;
+        margin: 20px auto;
+        a{
+            font-family: $secondary-font;
+            font-size: 20px;
+            color:$primary-white;
+        }
     }
 }

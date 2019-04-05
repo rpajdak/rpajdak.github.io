@@ -103,12 +103,12 @@ button {
   line-height: 10px;
 }
 
-img.envelope {
-  height: 10px;
-  width: 13px;
+.contact-details p:last-child {
+  display: none;
 }
 
-img.phone {
+.envelope,
+.phone {
   height: 13px;
   width: 13px;
 }
@@ -116,6 +116,95 @@ img.phone {
 img.pointer {
   height: 19px;
   width: 13px;
+}
+
+.contact-map {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .contact-container {
+    height: auto;
+    width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    display: block;
+    z-index: 1000;
+  }
+  .contact-container h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .contact-text span {
+    font-family: "Suprema - Semi Bold";
+    font-size: 18px;
+    margin-bottom: 22px;
+    display: inline-block;
+    text-transform: none;
+  }
+  .contact-text span a {
+    font-size: 18px;
+    font-family: "Suprema - Semi Bold";
+  }
+  .contact-text p {
+    font-size: 16px;
+  }
+  .contact-details-desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 40vh;
+    background-color: #f0eeee;
+    position: relative;
+    padding: 20px 30px;
+    margin: 40px 0;
+  }
+  .contact-details {
+    width: 50%;
+    font-size: 22px;
+  }
+  .contact-details p {
+    font-family: "Suprema";
+    color: #363636;
+    width: 60%;
+    line-height: 20px;
+  }
+  .contact-details p:last-child {
+    display: block;
+  }
+  .green-arrow,
+  .envelope,
+  .phone {
+    height: 30px;
+    width: 30px;
+  }
+  img.pointer {
+    height: 36px;
+    width: 30px;
+  }
+  .contact-map {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-map img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 /* Rules page */
@@ -134,19 +223,63 @@ img.pointer {
 
 .rules-text span {
   font-size: 9px;
+  font-family: "Suprema - Semi Bold";
 }
 
-.rules-text a {
+.rules-text span a {
   color: #363636;
   font-weight: 600;
   font-family: "Suprema - Semi Bold";
   font-size: 9px;
 }
 
+.rules-text .rulespage-back-btn {
+  display: none;
+}
+
 .rules-text p {
   font-family: "Suprema";
   font-size: 8px;
   margin: 10px;
+}
+
+@media (min-width: 992px) {
+  .rules-container {
+    height: auto;
+    width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    display: block;
+    z-index: 1000;
+  }
+  .rules-container h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+  .rules-text span {
+    font-family: "Suprema - Semi Bold";
+    font-size: 18px;
+    margin-bottom: 22px;
+    display: inline-block;
+    text-transform: none;
+  }
+  .rules-text span a {
+    text-transform: none;
+    font-size: 18px;
+    font-family: "Suprema - Semi Bold";
+  }
+  .rulespage-back-btn {
+    width: 30%;
+    height: 40px;
+    background-color: #6cda00;
+    display: block;
+    margin: 20px auto;
+  }
+  .rulespage-back-btn a {
+    font-family: "Suprema";
+    font-size: 20px;
+    color: #ffffff;
+  }
 }
 
 .item-container,
@@ -516,9 +649,6 @@ ul.similiar-items-list {
     text-transform: none;
     font-size: 18px;
     font-family: "Suprema - Semi Bold";
-  }
-  .newsletter-container {
-    display: block !important;
   }
 }
 
