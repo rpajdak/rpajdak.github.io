@@ -40,7 +40,7 @@
     p {
         display: inline;
         font-size: 10px;
-        font-family: $primary-font;
+        font-family: $semi-bold;
         color: $primary-font-color;
         padding: 0;
         margin: 0;
@@ -1303,7 +1303,7 @@ label:before {
         width: 100%;
 
         a {
-            margin-bottom: 6px;
+            margin-bottom: 12px;
             line-height: 24px;
             font-size: 12px;
             display: flex;

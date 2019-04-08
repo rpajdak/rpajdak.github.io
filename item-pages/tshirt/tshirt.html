@@ -9,41 +9,44 @@
     <link rel="stylesheet" href="../../css/main.css">
 </head>
 
-<body onload="changeThumbnails(); highlightSize()">
+<body onload="changeThumbnails(); highlightSize();changeQuantity()">
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <a href="../../index.html"><img src="../../img/header/logo.png" alt="Whatgeekneeds logo"></a>
+                <a href="index.html"><img src="../../img/header/logo.png" alt="Whatgeekneeds logo"></a>
             </div>
             <div class="header-user-login">
                 <a href="#">
                     <img src="../../img/header/my_account.png" class="user-icon-image" alt="User icon">
                     <p>moje konto</p>
                 </a>
-                <button class="hamburger-menu-icon"><img src="../../img/header/hamburger.png" alt="Hamburger menu icon">
+                <div class="price-basket">
+                    <input type="text" id="name" placeholder="00,00 PLN">
+                    <button type="button"><img src="../../img/header/koszyk_kopia.png" alt=""> Koszyk</button>
+                </div>
+                <button class="hamburger-menu-icon"><img src="/img/header/hamburger.png" alt="Hamburger menu icon">
                 </button>
             </div>
             <div class="header-search-form">
                 <input type="text" id="name" placeholder="Czego szukasz?">
-                <button type="button" class="btnSearch"><img src="../../img/header/search-icon.png" alt="">
-                    Szukaj</button>
+                <button type="button"><img src="/img/header/search-icon.png" alt=""> Szukaj</button>
             </div>
         </div>
         <nav class="navigation">
             <div class="navigation-user">
-                <a href="#">
-                    <img src="../../img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
+                <a>
+                    <img src="/img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
                     <h3>moje konto</h3>
                 </a>
-                <button class="hamburger-menu-icon-visible"><img src="../../img/header/nav/circle.svg"
+                <button><img class="hamburger-menu-icon-visible" src="/img/header/nav/circle.svg"
                         alt="Hamburger menu icon"></a>
             </div>
             <div class="navigation-list">
                 <ul>
-                    <li>
                     <li><a href="../../all-items.html">Wszystkie produkty</a>
-                        <button class="navigation-list-plus"><img src="../../img/header/nav/cross.png"
+                        <button><img src="/img/header/nav/cross.png" class="navigation-list-plus"
                                 alt="White cross"></button>
+
                         <ul class="navigation-list-products hidden">
                             <li><a href="#">Gadżety antystresowe</a></li>
                             <li><a href="#">Kubki</a></li>
@@ -54,19 +57,41 @@
                     <li><a href="#">Promocje</a></li>
                     <li><a href="#">Nowości</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="../../rules.html">Regulamin</a></li>
-                    <li><a href="../../contact.html">Kontakt</a></li>
-                    <li><a href="../../faq.html">Faq</a></li>
+                    <li><a href="rules.html">Regulamin</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="faq.html">Faq</a></li>
                 </ul>
             </div>
+        </nav>
+        <nav class="navigation-desktop">
+            <ul class="main">
+                <li><a href="all-items.html">Wszystkie produkty</a>
+                    <ul class="drop">
+                        <div>
+                            <li><a href="#">Gadżety antystresowe</a></li>
+                            <li><a href="#">Kubki</a></li>
+                            <li><a href="#">shirty</a></li>
+                            <li><a href="#">Skarpety</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#">Nowości</a></li>
+                <li><a href="#">Promocje</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
     <section>
         <div class="item-container">
-            <h1>Nazwa produktu</h1>
-            <div class="item-text">
-                <span><a href="../../index.html">Strona główna ></a><a href="#">Wszystkie produkty ></a> Nazwa produktu
-                </span>
+            <div class="container-top-text">
+                <h1>Nazwa produktu</h1>
+                <div class="item-text">
+                    <span><a href="../../index.html">Strona główna ></a><a href="/all-items.html">Wszystkie produkty
+                            ></a> Nazwa
+                        produktu
+                    </span>
+                </div>
             </div>
             <div class="main-photo">
                 <img src="../tshirt/tshirt.png" id="current" alt="">
@@ -80,15 +105,34 @@
             </div>
             <div class="item-price">
                 <p>69 <span>pln</span></p>
+                <div class="delivery-price">
+                    <p>Dostawa już od 10 PLN</p>
+                    <label for="quantity">Ilość</label>
+                    <div class="input-for-quantity">
+                        <input type="number" value="1" min="0" max="50" id="input-quantity" />
+                        <div id="inc-button" class="spinner-button"><img src="../../img/items/arrow-inc.png"
+                                alt="Arrow Increment"></div>
+                        <div id="dec-button" class="spinner-button"><img src="../../img/items/arrow-dec.png"
+                                alt="Arrow Decrement"></div>
+                    </div>
+                </div>
             </div>
-            <span>Rozmiar</span>
-            <ul class="item-sizes">
-                <li class="size-variant">S</li>
-                <li class="size-variant">M</li>
-                <li class="size-variant">L</li>
-                <li class="size-variant">XL</li>
-            </ul>
-            <button>Dodaj do koszyka</button>
+            <div class="sizes-container">
+                <span>Rozmiar</span>
+                <ul class="item-sizes">
+                    <li class="size-variant">S</li>
+                    <li class="size-variant">M</li>
+                    <li class="size-variant">L</li>
+                    <li class="size-variant">XL</li>
+                </ul>
+                <div class="in-stock">
+                    <p><img src="/img/items/available-dot.png" alt=""> Dostępny na magazynie</p>
+                    <p>Kod towaru: XYZ-123</p>
+                </div>
+            </div>
+            <div class="first-btn">
+                <button>Dodaj do koszyka</button>
+            </div>
             <div class="item-description-container">
                 <h1>Nazwa produktu</h1>
                 <ul class="item-description-list">
@@ -155,11 +199,24 @@
                         mollit anim id est laborum.</p>
                 </div>
             </div>
-
-            <button>Dodaj do koszyka</button>
-            <div class="similiar-items">
-                <span>Podobne produkty</span>
+            <div class="second-btn">
+                <button>Dodaj do koszyka</button>
+            </div>
+            <div class="similiar">
+                <h3>Podobne produkty</h3>
                 <ul class="similiar-items-list">
+                    <li><a href="#">
+                            <div class="item-box"><a href="#">
+                                    <div class="item-image">
+                                        <img src="../../img/items/mug.png" alt="Mug game-over">
+                                    </div>
+                                    <div class="item-name-price">
+                                        <h3>Kubek game over</h3>
+                                        <p>45 <span>pln</span></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </a> </li>
                     <li><a href="#">
                             <div class="item-box"><a href="#">
                                     <div class="item-image">
@@ -199,6 +256,48 @@
                 </ul>
             </div>
     </section>
+    <section>
+        <div class="newsletter-container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-inputs">
+                    <h3>Zapisz się do newslettera</h3>
+                    <input type="text" class="newsletter-input" id="name" placeholder="Imię">
+                    <input type="text" class="newsletter-input" id="e-mail" placeholder="e-mail">
+                    <div class="newsletter-container-checkbox">
+                        <input id="check1" type="checkbox" class="checkbox-input">
+                        <label for="check1">Akceptuję regulamin i wyrażam zgodę na przetwarzanie
+                            danychosobowych.</label>
+                    </div>
+                    <div class="second-btn">
+                        <button type="button" class="newsletter-btn">Potwierdź</button>
+                    </div>
+                </div>
+                <div class="newsletter-bok">
+                    <h3>Bok</h3>
+                    <a href="rules.html">Regulamin</a>
+                    <a href="#">Prywatność</a>
+                    <a href="faq.html">Faq</a>
+                </div>
+                <div class="newsletter-contact">
+                    <div>
+                        <h3>Kontakt</h3>
+                        <a href="mailto:contact@whatgeekneeds.com"><img src="../../img/contact/envelope.png"
+                                alt="Green envelope">contact@whatgeekneeds.com</a>
+                        <a href="#"><img src="../../img/contact/phone.png" alt="phone">+48 555 333 222</a>
+                        <a href="#"><img src="../../img/contact/localization.png" alt="Maps pointer">ul.
+                            Bracka 21/80 31 - 005 Kraków</a>
+                    </div>
+                    <div class="newsletter-contact-social-media">
+                        <a href="#"><img src="../../img/footer/facebook_logo_transparent.png" alt="Facebook Logo"></a>
+                        <a href="#"><img src="../../footer/instagram_logo_transparent.png" alt="Instagram Logo"></a>
+                    </div>
+                </div>
+                <div class="newsletter-copyright-text">
+                    <p>Copyright 2019 whatgeekneeds.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="footer-container">
             <span class="copyright-text">
@@ -207,6 +306,7 @@
             <span class="social-media">
                 <h3>Social Media:</h3>
                 <a href="#"><img src="../../img/footer/facebook_logo.png" alt="Facebook Logo"></a>
+                <a href="#"><img src="../../img/footer/instagram_logo.png" alt="Instagram Logo"></a>
                 <a href="#"><img src="../../img/footer/instagram_logo.png" alt="Instagram Logo"></a>
             </span>
         </div>

@@ -31,6 +31,10 @@
     position: relative;
 }
 
+.sort-filter-option-desktop {
+    display: none;
+}
+
 .sort-filter-option {
     width: 70%;
     border: 3px solid #6cda00;
@@ -43,24 +47,27 @@
     color: $primary-font-color;
     opacity: 1;
     z-index: 1002;
+    display: none;
 
     h2 {
         font-size: 14px;
         margin: 12px auto;
-        font-family:$semi-bold;
+        font-family: $semi-bold;
     }
 
     h3 {
         margin: 5px auto 5px 10px;
         font-size: 8px;
     }
-    ul{
-        li{
-            input{
+
+    ul {
+        li {
+            input {
                 display: none;
             }
         }
     }
+
     li {
         @include flex(flex-start, center);
         margin-top: 2px;
@@ -77,7 +84,7 @@
     label::before {
         left: 0;
         top: -3px;
-        background-color: #ffffff;
+        background-color: $primary-white;
     }
 
     button {
@@ -99,9 +106,9 @@
         color: $primary-font-color;
         font-size: 12px;
         margin-top: 12px;
+
         &::placeholder {
             color: $input-font-color;
-            ;
         }
     }
 
@@ -110,7 +117,7 @@
 .checkbox-input-sort:checked+label:before {
     font-size: 10px;
     line-height: 15px;
-    background-color: #6cda00;
+    background-color: $light-green;
 }
 
 .btn {
@@ -328,6 +335,136 @@
         }
 
     }
+}
 
+@media (min-width:992px) {
 
+    .products-list-text {
+        p {
+            font-size: 24px;
+        }
+    }
+
+    .sort-filter {
+        display: none;
+    }
+
+    .products-list-text {
+        position: relative;
+        height: 100%;
+    }
+
+    .sort-filter-option-desktop {
+        width: 1200px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 40% 30% 20%;
+        grid-template-rows: auto;
+        justify-content: space-between;
+        background-color: $light-green;
+        color: $primary-white;
+        margin: 20px 0;
+        padding: 10px;
+
+        h2 {
+            font-size: 18px;
+            margin: 12px auto;
+            font-family: $semi-bold;
+        }
+
+        h3 {
+            margin: 5px auto 5px 10px;
+            font-size: 14px;
+        }
+
+        ul {
+            li {
+                input {
+                    display: none;
+                }
+            }
+        }
+
+        li {
+            @include flex(flex-start, center);
+            margin: 10px 0 10px 10px;
+            height: 20px;
+        }
+
+        input {
+            box-shadow: inset 3px 4px 7px 1px rgba(0, 0, 0, 0.02);
+            background-color: #f0eeee;
+            height: 32px;
+            width: 70%;
+            padding: 5px;
+            color: $primary-font-color;
+            font-size: 12px;
+            margin-top: 12px;
+
+            &::placeholder {
+                color: $input-font-color;
+            }
+        }
+
+        label {
+            padding-left: 26px;
+            font-size: 16px;
+        }
+
+        label::before {
+            left: 0;
+            top: -3px;
+            background-color: $light-green;
+            border: 2px solid #a7e966;
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    .checkbox-input-sort:checked+label:before {
+        font-size: 20px;
+        line-height: 30px;
+        background-color: $primary-white;
+    }
+
+    .sort-checkbox:checked+label:before {
+        background-color: $primary-white;
+    }
+
+    .sort {
+        padding-bottom: 12px;
+
+        button {
+            display: none;
+        }
+
+        input {
+            background-color: #a0e25f;
+            width: 50%;
+            margin-left: 22px;
+
+            &::placeholder {
+                color: #e9fad9;
+            }
+        }
+    }
+
+    .genders {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+
+        button {
+            background-color: $primary-white;
+            color: $light-green;
+            margin: 0;
+            width: 80%;
+        }
+    }
+
+    .mobile {
+        display: none;
+    }
 }

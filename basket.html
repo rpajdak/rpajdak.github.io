@@ -13,29 +13,39 @@
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <a href="index.html"><img src="img/header/logo.png" alt="Whatgeekneeds logo"></a>
+                <a href="index.html"><img src="/img/header/logo.png" alt="Whatgeekneeds logo"></a>
             </div>
             <div class="header-user-login">
                 <a href="#">
-                    <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
+                    <img src="/img/header/my_account.png" class="user-icon-image" alt="User icon">
                     <p>moje konto</p>
                 </a>
-                <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
+                <div class="price-basket">
+                    <input type="text" id="name" placeholder="00,00 PLN">
+                    <button type="button"><img src="/img/header/koszyk_kopia.png" alt=""> Koszyk</button>
+                </div>
+                <button class="hamburger-menu-icon"><img src="/img/header/hamburger.png" alt="Hamburger menu icon">
                 </button>
+            </div>
+            <div class="header-search-form">
+                <input type="text" id="name" placeholder="Czego szukasz?">
+                <button type="button"><img src="/img/header/search-icon.png" alt=""> Szukaj</button>
             </div>
         </div>
         <nav class="navigation">
             <div class="navigation-user">
                 <a>
-                    <img src="img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
+                    <img src="/img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
                     <h3>moje konto</h3>
                 </a>
-                <button><img class="hamburger-menu-icon-visible" src="img/header/nav/circle.svg" alt="Hamburger menu icon"></a>
+                <button><img class="hamburger-menu-icon-visible" src="/img/header/nav/circle.svg"
+                        alt="Hamburger menu icon"></a>
             </div>
             <div class="navigation-list">
                 <ul>
                     <li><a href="../../all-items.html">Wszystkie produkty</a>
-                        <button><img src="img/header/nav/cross.png" class="navigation-list-plus" alt="White cross"></button>
+                        <button><img src="/img/header/nav/cross.png" class="navigation-list-plus"
+                                alt="White cross"></button>
 
                         <ul class="navigation-list-products hidden">
                             <li><a href="#">Gadżety antystresowe</a></li>
@@ -52,6 +62,24 @@
                     <li><a href="faq.html">Faq</a></li>
                 </ul>
             </div>
+        </nav>
+        <nav class="navigation-desktop">
+            <ul class="main">
+                <li><a href="all-items.html">Wszystkie produkty</a>
+                    <ul class="drop">
+                        <div>
+                            <li><a href="#">Gadżety antystresowe</a></li>
+                            <li><a href="#">Kubki</a></li>
+                            <li><a href="#">shirty</a></li>
+                            <li><a href="#">Skarpety</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#">Nowości</a></li>
+                <li><a href="#">Promocje</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
     <section class="basket-container">
@@ -109,32 +137,83 @@
                 <p>+ Dostawa od 10 <span>PLN</span></p>
             </div>
         </div>
-        <div class="address-data">
-            <span>1/3 Dane do wysyłki</span>
-            <input type="text" id="name" placeholder="Imię">
-            <input type="text" id="surname" placeholder="Nazwisko">
-            <input type="text" id="street" placeholder="Ulica">
-            <input type="text" id="number" placeholder="Numer">
-            <input type="text" id="city" placeholder="Miasto">
-            <input type="text" id="zip-code" placeholder="Kod pocztowy">
-            <input type="checkbox" id="invoice" class="green-checkbox" />
-            <label for="invoice">Faktura</label>
+        <div class="adress-invoice">
+            <div class="top-span">
+                <span>1/3 Dane do wysyłki</span>
+            </div>
+            <div class="address-data">
+                <h2>Dane do wysyłki</h2>
+                <input type="text" id="name" placeholder="Imię">
+                <input type="text" id="surname" placeholder="Nazwisko">
+                <input type="text" id="street" placeholder="Ulica">
+                <input type="text" id="number" placeholder="Numer">
+                <input type="text" id="city" placeholder="Miasto">
+                <input type="text" id="zip-code" placeholder="Kod pocztowy">
+                <input type="checkbox" id="invoice" class="green-checkbox" />
+                <label for="invoice">Faktura</label>
+            </div>
+            <div class="invoice">
+                <div>
+                    <h2>Dane do fakury</h2>
+                    <input type="checkbox" id="repeat" class="green-checkbox" />
+                    <label for="repeat">Powtórz dane
+                    </label>
+                </div>
+                <input type="text" id="company-name" placeholder="Nazwa firny">
+                <input type="text" id="name" placeholder="Imię">
+                <input type="text" id="surname" placeholder="Nazwisko">
+                <input type="text" id="street" placeholder="Ulica">
+                <input type="text" id="number" placeholder="Numer">
+                <input type="text" id="city" placeholder="Miasto">
+                <input type="text" id="zip-code" placeholder="Kod pocztowy">
+                <input type="text" id="nip" placeholder="NIP">
+            </div>
         </div>
-        <div class="invoice">
-            <h2>Dane do fakury</h2>
-            <input type="checkbox" id="repeat" class="green-checkbox" />
-            <label for="repeat">Powtórz dane
-            </label>
-            <input type="text" id="company-name" placeholder="Nazwa firny">
-            <input type="text" id="name" placeholder="Imię">
-            <input type="text" id="surname" placeholder="Nazwisko">
-            <input type="text" id="street" placeholder="Ulica">
-            <input type="text" id="number" placeholder="Numer">
-            <input type="text" id="city" placeholder="Miasto">
-            <input type="text" id="zip-code" placeholder="Kod pocztowy">
-            <input type="text" id="nip" placeholder="NIP">
+        <div class="confirm-btn">
+            <button class="btn">Zatwierdź</button>
         </div>
-        <button class="btn">Zatwierdź</button>
+    </section>
+    <section>
+        <div class="newsletter-container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-inputs">
+                    <h3>Zapisz się do newslettera</h3>
+                    <input type="text" class="newsletter-input" id="name" placeholder="Imię">
+                    <input type="text" class="newsletter-input" id="e-mail" placeholder="e-mail">
+                    <div class="newsletter-container-checkbox">
+                        <input id="check1" type="checkbox" class="checkbox-input">
+                        <label for="check1">Akceptuję regulamin i wyrażam zgodę na przetwarzanie
+                            danychosobowych.</label>
+                    </div>
+                    <div class="second-btn">
+                        <button type="button" class="newsletter-btn">Potwierdź</button>
+                    </div>
+                </div>
+                <div class="newsletter-bok">
+                    <h3>Bok</h3>
+                    <a href="rules.html">Regulamin</a>
+                    <a href="#">Prywatność</a>
+                    <a href="faq.html">Faq</a>
+                </div>
+                <div class="newsletter-contact">
+                    <div>
+                        <h3>Kontakt</h3>
+                        <a href="mailto:contact@whatgeekneeds.com"><img src="/img/contact/envelope.png"
+                                alt="Green envelope">contact@whatgeekneeds.com</a>
+                        <a href="#"><img src="/img/contact/phone.png" alt="phone">+48 555 333 222</a>
+                        <a href="#"><img src="/img/contact/localization.png" alt="Maps pointer">ul.
+                            Bracka 21/80 31 - 005 Kraków</a>
+                    </div>
+                    <div class="newsletter-contact-social-media">
+                        <a href="#"><img src="/img/footer/facebook_logo_transparent.png" alt="Facebook Logo"></a>
+                        <a href="#"><img src="/img/footer/instagram_logo_transparent.png" alt="Instagram Logo"></a>
+                    </div>
+                </div>
+                <div class="newsletter-copyright-text">
+                    <p>Copyright 2019 whatgeekneeds.com</p>
+                </div>
+            </div>
+        </div>
     </section>
     <footer>
         <div class="footer-container">

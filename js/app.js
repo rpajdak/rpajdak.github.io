@@ -85,14 +85,14 @@ const body = document.body;
 /* Open menu */
 function openCloseSortMenu() {
     sortMenuOpenBtn.addEventListener("click", () => {
-        sortMenuDiv.classList.remove("hide");
+        sortMenuDiv.style.display = 'block';
         fadeDiv.classList.toggle("active-fade");
         document.body.style.overflow = "hidden";
     });
     /* Close menu */
 
     sortMenuCloseBtn.addEventListener("click", () => {
-        sortMenuDiv.classList.add("hide");
+        sortMenuDiv.style.display = 'none';
         fadeDiv.classList.toggle("active-fade");
         document.body.style.overflow = "auto";
     })
@@ -112,27 +112,30 @@ function highlightSize() {
 
     }
 }
-/*Display map on contact page */
-function initMap() {
-    
-    var uluru = { lat: -25.344, lng: 131.036 };
-    
-    var map = new google.maps.Map(
-        document.getElementById('map'), { zoom: 4, center: uluru });
-    
-    var marker = new google.maps.Marker({ position: uluru, map: map });
+
+
+/*Increment and Decrement value in quantity input */
+function changeQuantity() {
+    const arrowInc = document.getElementById("inc-button");
+    const arrowDec = document.getElementById("dec-button");
+    let quantityInputValue = document.getElementById("input-quantity").value;
+    let quantityInput = document.getElementById("input-quantity");
+
+    arrowInc.addEventListener("click", () => {
+        if (quantityInputValue > 49) {
+            return;
+        } else {
+            quantityInputValue++;
+            quantityInput.value = quantityInputValue;
+        }
+    });
+    arrowDec.addEventListener("click", () => {
+        if (quantityInputValue <= 0) {
+            return;
+        } else {
+            quantityInputValue--;
+            quantityInput.value = quantityInputValue;
+        }
+
+    })
 }
-
-
-
-// function borderChange() {
-//     const sqr = document.querySelectorAll(".kwadrat");
-//     for (let i = 0; i < sqr.length; i++) {
-//         sqr[i].addEventListener("click", () => {
-//             for (let i = 0; i < sqr.length; i++) {
-//                 sqr[i].classList.remove("red")
-//             }
-//             sqr[i].classList.add("red");
-//         })
-//     }
-// }

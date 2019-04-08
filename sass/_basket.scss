@@ -127,12 +127,7 @@
     margin: 0;
 }
 
-.address-data,
-.invoice {
-    color: $primary-font-color;
-    font-family: $semi-bold;
-    margin: 12px auto;
-
+.top-span {
     span {
         width: 100%;
         height: 13px;
@@ -144,6 +139,13 @@
         padding-left: 5px;
         line-height: 13px;
     }
+}
+
+.address-data,
+.invoice {
+    color: $primary-font-color;
+    font-family: $semi-bold;
+    margin: 12px auto;
 
     h2 {
         font-size: 14px;
@@ -276,13 +278,101 @@
         }
     }
 
+}
 
-    .old-price::before {
-        border-bottom: 1px solid red;
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 50%;
+@media (min-width:992px) {
+    .basket-container {
+        width: 1200px;
+        margin: 0 auto;
+
+        input {
+            height: 42px;
+            font-size: 22px;
+        }
+        ::-webkit-input-placeholder {
+            font-size: 22px;
+        }
     }
+
+    .adress-invoice {
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "top-span top-span"
+            "adress invoice"
+            "btn btn";
+    }
+
+    .top-span {
+        grid-area: top-span;
+        background-color: black;
+
+        span {
+            width: 100%;
+        }
+    }
+
+    .address-data {
+        grid-area: adress;
+
+        h2 {
+            height: 48px;
+            margin-bottom: 0;
+        }
+    }
+
+    .invoice {
+        grid-area: invoice;
+
+        div {
+            height: 48px;
+            ;
+        }
+    }
+    .btn{
+        height: 42px;
+    }
+    .confirm-btn {
+        width: 100%;
+        grid-area: btn;
+        text-align: center;
+
+        button {
+            width: 50%;
+            margin: 12px auto;
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
