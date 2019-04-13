@@ -29,10 +29,15 @@
 }
 
 .chosen-items {
+    h1 {
+        font-family: $semi-bold;
+    }
+
     span {
         font-size: 6px;
         display: block;
         margin: 6px auto;
+        font-family: $semi-bold;
     }
 
 }
@@ -89,6 +94,7 @@
 }
 
 .items {
+
     ol {
         counter-reset: item;
         list-style-type: none;
@@ -113,6 +119,8 @@
             content: counter(item) "  ";
             counter-increment: item;
             color: $primary-font-color;
+            font-weight: 400;
+            font-family: $semi-bold;
         }
 
         p {
@@ -121,10 +129,18 @@
     }
 }
 
+.input-for-quantity {
+    display: none;
+}
+
 .btn-edit {
     font-size: 8px;
     height: 16px;
     margin: 0;
+}
+
+.trash-icon {
+    display: none;
 }
 
 .top-span {
@@ -134,6 +150,7 @@
         background-color: $dark-green;
         color: #ffffff;
         display: block;
+        font-family: $semi-bold;
         font-size: 7px;
         font-weight: 400;
         padding-left: 5px;
@@ -168,12 +185,10 @@
     font-size: 20px;
 }
 
-.final-price>div {
-    width: 50%;
-}
-
+.final-price>div,
 .final-price-with-code>div {
     width: 50%;
+    padding-left: 20%;
 }
 
 .final-price,
@@ -289,9 +304,112 @@
             height: 42px;
             font-size: 22px;
         }
+
         ::-webkit-input-placeholder {
             font-size: 22px;
         }
+
+        span {
+            font-size: 10px;
+        }
+
+        a {
+            font-size: 12px;
+        }
+    }
+
+    .chosen-items {
+        h1 {
+            font-size: 24px;
+        }
+
+        a {
+            font-size: 16px;
+        }
+
+        span {
+            font-size: 12px;
+            display: block;
+            margin: 6px auto;
+        }
+
+    }
+
+    .item-price-basket {
+
+        span {
+            line-height: 16px;
+            margin: 6px 6px 0 6px;
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+
+    .items {
+        ol {
+            li {
+                margin: 24px auto;
+
+                img {
+                    width: 30%;
+                }
+            }
+        }
+    }
+
+    .trash-icon {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            width: 30px !important;
+            height: 30px;
+        }
+    }
+
+    .item-name-variant p:last-child {
+        display: none;
+    }
+
+    .btn-edit {
+        display: none;
+    }
+
+    .promo-code-input>div {
+        width: 50%;
+        display: inline-flex;
+    }
+
+    .promo-code-input {
+        display: flex;
+        justify-content: space-between;
+        height: 48px;
+        margin: 24px 0;
+
+        input {
+            border: 2px solid $light-green;
+            width: 40%;
+            height: 48px;
+            margin: 0;
+        }
+
+        button {
+            background-color: $light-green;
+            width: 40%;
+            color: $primary-white;
+            font-size: 18px;
+        }
+    }
+
+    .final-price,
+    .final-price-with-code {
+        margin: 30px 0;
     }
 
     .adress-invoice {
@@ -306,10 +424,13 @@
 
     .top-span {
         grid-area: top-span;
-        background-color: black;
+        // height: 30px;
 
         span {
             width: 100%;
+            height: 30px;
+            font-size: 14px;
+            line-height: 30px;
         }
     }
 
@@ -330,9 +451,79 @@
             ;
         }
     }
-    .btn{
+
+    .items {
+
+        ol {
+            li {
+                display: grid;
+                grid-template-columns: 5% 15% 25% 15% 10% 20%;
+                justify-content: space-between;
+                align-items: flex-start;
+                grid-column-gap: 0;
+            }
+        }
+    }
+
+    .input-for-quantity {
+        display: block;
+        position: relative;
+        height: 42px;
+        padding: 0;
+
+        img {
+            width: 50%;
+            height: auto;
+        }
+
+    }
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 78px;
+        height: 42px;
+        text-align: center;
+        // padding-left: 12px;
+        font-size: 14pt;
+        background-color: #f0eeee;
+        z-index: 1;
+        margin: 0;
+    }
+
+    .spinner-button {
+        left: 78px;
+        position: absolute;
+        cursor: pointer;
+        background-color: $light-green;
+        width: 50px;
+        margin: 0px;
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    #inc-button {
+        top: 0px;
+
+    }
+
+    #dec-button {
+        bottom: 0;
+    }
+
+    .btn {
         height: 42px;
     }
+
     .confirm-btn {
         width: 100%;
         grid-area: btn;

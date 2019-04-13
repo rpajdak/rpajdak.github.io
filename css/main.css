@@ -691,6 +691,7 @@ ul.similiar-items-list {
   }
   .delivery-price label {
     margin-top: 18px;
+    margin-bottom: 12px;
     padding: 0;
     font-family: "Suprema - Semi Bold";
   }
@@ -708,10 +709,10 @@ ul.similiar-items-list {
     background-color: #f0eeee;
   }
   .input-for-quantity {
+    display: block;
     position: relative;
     height: 50px;
     padding: 0;
-    margin: 12px 0;
   }
   .input-for-quantity img {
     width: 50%;
@@ -726,8 +727,8 @@ ul.similiar-items-list {
     position: relative;
     left: 0px;
     top: 0px;
-    width: 78px;
-    height: 100%;
+    width: 72px;
+    height: 42px;
     text-align: center;
     font-size: 14pt;
     background-color: #f0eeee;
@@ -842,6 +843,13 @@ ul.similiar-items-list {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: similiar;
+  }
+  .similiar p {
+    font-size: 24px;
+    margin: 12px 0;
+  }
+  .item-name-price p {
+    font-size: 35px;
   }
   ul.similiar-items-list {
     -ms-grid-columns: (24%)[4];
@@ -1491,10 +1499,15 @@ ul.similiar-items-list {
   color: #b4b3b3;
 }
 
+.chosen-items h1 {
+  font-family: "Suprema - Semi Bold";
+}
+
 .chosen-items span {
   font-size: 6px;
   display: block;
   margin: 6px auto;
+  font-family: "Suprema - Semi Bold";
 }
 
 .item-name-variant {
@@ -1573,6 +1586,8 @@ ul.similiar-items-list {
   content: counter(item) "  ";
   counter-increment: item;
   color: #363636;
+  font-weight: 400;
+  font-family: "Suprema - Semi Bold";
 }
 
 .items ol p {
@@ -1581,10 +1596,18 @@ ul.similiar-items-list {
   display: inline-flex;
 }
 
+.input-for-quantity {
+  display: none;
+}
+
 .btn-edit {
   font-size: 8px;
   height: 16px;
   margin: 0;
+}
+
+.trash-icon {
+  display: none;
 }
 
 .top-span span {
@@ -1593,6 +1616,7 @@ ul.similiar-items-list {
   background-color: #058325;
   color: #ffffff;
   display: block;
+  font-family: "Suprema - Semi Bold";
   font-size: 7px;
   font-weight: 400;
   padding-left: 5px;
@@ -1629,12 +1653,10 @@ ul.similiar-items-list {
   font-size: 20px;
 }
 
-.final-price > div {
-  width: 50%;
-}
-
+.final-price > div,
 .final-price-with-code > div {
   width: 50%;
+  padding-left: 20%;
 }
 
 .final-price,
@@ -1744,6 +1766,90 @@ ul.similiar-items-list {
   .basket-container ::-webkit-input-placeholder {
     font-size: 22px;
   }
+  .basket-container span {
+    font-size: 10px;
+  }
+  .basket-container a {
+    font-size: 12px;
+  }
+  .chosen-items h1 {
+    font-size: 24px;
+  }
+  .chosen-items a {
+    font-size: 16px;
+  }
+  .chosen-items span {
+    font-size: 12px;
+    display: block;
+    margin: 6px auto;
+  }
+  .item-price-basket span {
+    line-height: 16px;
+    margin: 6px 6px 0 6px;
+    font-size: 16px;
+  }
+  .item-price-basket p {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .items ol li {
+    margin: 24px auto;
+  }
+  .items ol li img {
+    width: 30%;
+  }
+  .trash-icon {
+    max-width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .trash-icon img {
+    width: 30px !important;
+    height: 30px;
+  }
+  .item-name-variant p:last-child {
+    display: none;
+  }
+  .btn-edit {
+    display: none;
+  }
+  .promo-code-input > div {
+    width: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .promo-code-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 48px;
+    margin: 24px 0;
+  }
+  .promo-code-input input {
+    border: 2px solid #6cda00;
+    width: 40%;
+    height: 48px;
+    margin: 0;
+  }
+  .promo-code-input button {
+    background-color: #6cda00;
+    width: 40%;
+    color: #ffffff;
+    font-size: 18px;
+  }
+  .final-price,
+  .final-price-with-code {
+    margin: 30px 0;
+  }
   .adress-invoice {
     display: -ms-grid;
     display: grid;
@@ -1758,10 +1864,12 @@ ul.similiar-items-list {
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: top-span;
-    background-color: black;
   }
   .top-span span {
     width: 100%;
+    height: 30px;
+    font-size: 14px;
+    line-height: 30px;
   }
   .address-data {
     -ms-grid-row: 2;
@@ -1779,6 +1887,70 @@ ul.similiar-items-list {
   }
   .invoice div {
     height: 48px;
+  }
+  .items ol li {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 5% 15% 25% 15% 10% 20%;
+        grid-template-columns: 5% 15% 25% 15% 10% 20%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    grid-column-gap: 0;
+  }
+  .input-for-quantity {
+    display: block;
+    position: relative;
+    height: 42px;
+    padding: 0;
+  }
+  .input-for-quantity img {
+    width: 50%;
+    height: auto;
+  }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 78px;
+    height: 42px;
+    text-align: center;
+    font-size: 14pt;
+    background-color: #f0eeee;
+    z-index: 1;
+    margin: 0;
+  }
+  .spinner-button {
+    left: 78px;
+    position: absolute;
+    cursor: pointer;
+    background-color: #6cda00;
+    width: 50px;
+    margin: 0px;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #inc-button {
+    top: 0px;
+  }
+  #dec-button {
+    bottom: 0;
   }
   .btn {
     height: 42px;
@@ -1957,7 +2129,6 @@ ul.similiar-items-list {
   font-family: "Suprema - Semi Bold";
   font-size: 6px;
   color: #363636;
-  margin: 6px auto;
 }
 
 .delivery-container a {
@@ -1985,61 +2156,61 @@ ul.similiar-items-list {
   display: inline-flex;
 }
 
-.delivery-way-price {
+.delivery-way-price,
+.item-price-basket {
   display: inline;
-  font-size: 12px;
   font-family: "Suprema - Semi Bold";
   text-align: end;
 }
 
-.delivery-way-price span {
-  font-size: 10px;
+.delivery-way-price p,
+.item-price-basket p {
+  font-size: 12px;
 }
 
-.delivery-way span {
-  width: 100%;
-  height: 13px;
-  background-color: #058325;
-  color: #ffffff;
-  display: block;
-  font-size: 7px;
-  font-weight: 400;
-  padding-left: 5px;
-  line-height: 13px;
+.delivery-way-price span,
+.item-price-basket span {
+  font-size: 8px;
+  background-color: transparent;
+  margin: 0 3px;
+}
+
+.delivery-way ul li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 60% 20%;
+      grid-template-columns: auto auto 60% 20%;
+  height: 48px;
+}
+
+.delivery-way ul li img {
+  width: 48px;
+  height: auto;
+  margin: 0 6px;
 }
 
 .delivery-way label {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 10% auto 16%;
-      grid-template-columns: 10% auto 16%;
-  margin: 20px auto;
-  font-size: 7px;
-  width: 100%;
-  height: 100%;
-  font-family: "Suprema";
-}
-
-.delivery-way label p {
-  text-transform: uppercase;
-  margin-left: 6px;
-}
-
-.delivery-way label p span {
-  padding: 0;
-  font-size: 7px;
-  display: inline;
-  color: #363636;
-  background-color: transparent;
+  margin: 0;
 }
 
 .delivery-way label::before {
   background-color: #ffffff;
   top: 8%;
+  height: 14px;
+  width: 14px;
 }
 
 img {
   width: 100%;
+}
+
+.items-selected {
+  margin-top: 36px;
+}
+
+.items-selected h3 {
+  font-family: "Suprema - Semi Bold";
+  font-size: 12px;
 }
 
 .items-selected input {
@@ -2067,11 +2238,11 @@ img {
 .items-selected ol li {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% 15% 60% 10%;
-      grid-template-columns: 5% 15% 60% 10%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-grid-columns: auto auto 60% 20%;
+      grid-template-columns: auto auto 60% 20%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -2094,6 +2265,10 @@ img {
   font-weight: 400;
   color: #363636;
   font-family: "Suprema - Semi Bold";
+}
+
+.items-selected .promo-code-input button {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -2120,6 +2295,54 @@ img {
   }
   .delivery-way label::before {
     top: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .delivery-container h1 {
+    font-size: 24px;
+  }
+  .delivery-container a {
+    font-size: 16px;
+  }
+  .delivery-container span {
+    font-size: 12px;
+    display: block;
+    margin: 6px auto;
+  }
+  .link-to-previous-page {
+    margin: 24px 0;
+  }
+  .link-to-previous-page p {
+    font-size: 16px;
+  }
+  .promo-code-input > div {
+    width: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .promo-code-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 48px;
+    margin: 24px 0;
+  }
+  .promo-code-input input {
+    border: 2px solid #6cda00;
+    width: 40%;
+    height: 48px;
+    margin: 0;
+  }
+  .promo-code-input button {
+    background-color: #6cda00;
+    width: 40%;
+    color: #ffffff;
+    font-size: 18px;
   }
 }
 
