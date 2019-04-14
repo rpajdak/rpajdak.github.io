@@ -30,7 +30,7 @@
         color: #363636;
         font-family: "Suprema - Semi Bold";
         font-size: 10px;
-        width: 80%;
+        // width: 80%;
         height: 10px;
         line-height: 10px;
         display: -webkit-inline-box;
@@ -128,7 +128,6 @@ img {
             grid-template-columns: 10px auto 50% 20%;
             height: 60px;
             margin: 10px auto;
-            border: 1px solid black;
 
             img {
                 width: 54px;
@@ -153,10 +152,40 @@ img {
 
     }
 
-    .promo-code-input {
-        button {
-            display: none;
-        }
+
+}
+.chosen-deliver-way{
+    display: grid;
+    grid-template-columns: 10px auto 50% 20%;
+    font-family: $semi-bold;
+    font-size: 10px;
+}
+.div-hidden-on-mobile {
+    display: none;
+}
+
+.promo-code-input {
+    div {
+        width: 100%;
+    }
+
+    input {
+        width: 90%;
+        margin: 0 auto;
+        background-color: #f0eeee;
+        font-family: $secondary-font;
+        padding: 8px;
+        border: none;
+        display: block;
+    }
+
+    input::placeholder {
+        font-family: $secondary-font;
+        color: $input-font-color;
+    }
+
+    button {
+        display: none;
     }
 }
 
@@ -231,12 +260,22 @@ img {
     }
 
     .items-selected {
+        h3{
+            font-size: 18px;
+            margin-bottom: 48px;
+        }
         ol {
             li {
                 display: grid;
-                grid-template-columns: 30px 120px 600px auto;
+                grid-template-columns: 30px 180px 600px auto;
                 height: 80px;
             }
+        }
+
+        img {
+            width: 36px;
+            height: auto;
+            margin: 0 auto;
         }
     }
 
@@ -244,12 +283,13 @@ img {
         ul {
             li {
                 display: grid;
-                grid-template-columns: 30px 120px 600px auto;
+                grid-template-columns: 30px 180px 600px auto;
                 height: 80px;
+
                 img {
                     width: auto;
                     height: 50px;
-                    margin: 0 18px;
+                    margin: 0 auto;
                 }
             }
 
@@ -272,8 +312,35 @@ img {
         }
     }
 
+    .item-price-basket,
     .delivery-way-price {
-        border: 1px solid black;
+        display: inline-flex;
+        justify-content: flex-start;
+        
+        span {
+            padding: 0;
+            margin: 4px;
+            height: auto;
+        }
+
+        p {
+            font-size: 24px;
+            line-height: 24px;
+            height: auto;
+            font-family: $semi-bold;
+            color: $primary-font-color;
+        }
+    }
+    .chosen-deliver-way{
+        display: grid;
+        grid-template-columns: 30px 180px 600px auto;
+        font-family: $semi-bold;
+        p{
+            font-size: 16px;
+        }
+    }
+    .div-hidden-on-mobile {
+        display: block;
     }
 
     .promo-code-input>div {
@@ -304,6 +371,7 @@ img {
         }
 
         button {
+            display:block;
             background-color: $light-green;
             width: 40%;
             color: $primary-white;

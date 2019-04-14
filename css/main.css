@@ -50,38 +50,6 @@ button {
   text-transform: uppercase;
 }
 
-.promo-code-input > div {
-  width: 50%;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.promo-code-input {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 48px;
-  margin: 24px 0;
-}
-
-.promo-code-input input {
-  border: 2px solid #6cda00;
-  width: 40%;
-  height: 48px;
-  margin: 0;
-}
-
-.promo-code-input button {
-  background-color: #6cda00;
-  width: 40%;
-  color: #ffffff;
-  font-size: 18px;
-}
-
 .contact-container {
   color: #363636;
   margin: 0;
@@ -2152,7 +2120,6 @@ ul.similiar-items-list {
   color: #363636;
   font-family: "Suprema - Semi Bold";
   font-size: 10px;
-  width: 80%;
   height: 10px;
   line-height: 10px;
   display: -webkit-inline-box;
@@ -2247,7 +2214,6 @@ img {
       grid-template-columns: 10px auto 50% 20%;
   height: 60px;
   margin: 10px auto;
-  border: 1px solid black;
 }
 
 .items-selected ol li img {
@@ -2270,7 +2236,54 @@ img {
   font-size: 18px;
 }
 
-.items-selected .promo-code-input button {
+.chosen-deliver-way {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 10px auto 50% 20%;
+      grid-template-columns: 10px auto 50% 20%;
+  font-family: "Suprema - Semi Bold";
+  font-size: 10px;
+}
+
+.div-hidden-on-mobile {
+  display: none;
+}
+
+.promo-code-input div {
+  width: 100%;
+}
+
+.promo-code-input input {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #f0eeee;
+  font-family: "Suprema";
+  padding: 8px;
+  border: none;
+  display: block;
+}
+
+.promo-code-input input::-webkit-input-placeholder {
+  font-family: "Suprema";
+  color: #b4b3b3;
+}
+
+.promo-code-input input:-ms-input-placeholder {
+  font-family: "Suprema";
+  color: #b4b3b3;
+}
+
+.promo-code-input input::-ms-input-placeholder {
+  font-family: "Suprema";
+  color: #b4b3b3;
+}
+
+.promo-code-input input::placeholder {
+  font-family: "Suprema";
+  color: #b4b3b3;
+}
+
+.promo-code-input button {
   display: none;
 }
 
@@ -2322,24 +2335,33 @@ img {
   .link-to-previous-page p {
     font-size: 16px;
   }
+  .items-selected h3 {
+    font-size: 18px;
+    margin-bottom: 48px;
+  }
   .items-selected ol li {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 30px 120px 600px auto;
-        grid-template-columns: 30px 120px 600px auto;
+    -ms-grid-columns: 30px 180px 600px auto;
+        grid-template-columns: 30px 180px 600px auto;
     height: 80px;
+  }
+  .items-selected img {
+    width: 36px;
+    height: auto;
+    margin: 0 auto;
   }
   .delivery-way ul li {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 30px 120px 600px auto;
-        grid-template-columns: 30px 120px 600px auto;
+    -ms-grid-columns: 30px 180px 600px auto;
+        grid-template-columns: 30px 180px 600px auto;
     height: 80px;
   }
   .delivery-way ul li img {
     width: auto;
     height: 50px;
-    margin: 0 18px;
+    margin: 0 auto;
   }
   .delivery-way label::before {
     top: 10px;
@@ -2355,8 +2377,41 @@ img {
     font-size: 16px;
     line-height: 16px;
   }
+  .item-price-basket,
   .delivery-way-price {
-    border: 1px solid black;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .item-price-basket span,
+  .delivery-way-price span {
+    padding: 0;
+    margin: 4px;
+    height: auto;
+  }
+  .item-price-basket p,
+  .delivery-way-price p {
+    font-size: 24px;
+    line-height: 24px;
+    height: auto;
+    font-family: "Suprema - Semi Bold";
+    color: #363636;
+  }
+  .chosen-deliver-way {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30px 180px 600px auto;
+        grid-template-columns: 30px 180px 600px auto;
+    font-family: "Suprema - Semi Bold";
+  }
+  .chosen-deliver-way p {
+    font-size: 16px;
+  }
+  .div-hidden-on-mobile {
+    display: block;
   }
   .promo-code-input > div {
     width: 50%;
@@ -2398,6 +2453,7 @@ img {
     color: #b4b3b3;
   }
   .promo-code-input button {
+    display: block;
     background-color: #6cda00;
     width: 40%;
     color: #ffffff;
