@@ -50,6 +50,38 @@ button {
   text-transform: uppercase;
 }
 
+.promo-code-input > div {
+  width: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.promo-code-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 48px;
+  margin: 24px 0;
+}
+
+.promo-code-input input {
+  border: 2px solid #6cda00;
+  width: 40%;
+  height: 48px;
+  margin: 0;
+}
+
+.promo-code-input button {
+  background-color: #6cda00;
+  width: 40%;
+  color: #ffffff;
+  font-size: 18px;
+}
+
 .contact-container {
   color: #363636;
   margin: 0;
@@ -1818,34 +1850,6 @@ ul.similiar-items-list {
   .btn-edit {
     display: none;
   }
-  .promo-code-input > div {
-    width: 50%;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-  }
-  .promo-code-input {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    height: 48px;
-    margin: 24px 0;
-  }
-  .promo-code-input input {
-    border: 2px solid #6cda00;
-    width: 40%;
-    height: 48px;
-    margin: 0;
-  }
-  .promo-code-input button {
-    background-color: #6cda00;
-    width: 40%;
-    color: #ffffff;
-    font-size: 18px;
-  }
   .final-price,
   .final-price-with-code {
     margin: 30px 0;
@@ -2178,8 +2182,8 @@ ul.similiar-items-list {
 .delivery-way ul li {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto 60% 20%;
-      grid-template-columns: auto auto 60% 20%;
+  -ms-grid-columns: auto auto 50% 20%;
+      grid-template-columns: auto auto 50% 20%;
   height: 48px;
 }
 
@@ -2198,6 +2202,11 @@ ul.similiar-items-list {
   top: 8%;
   height: 14px;
   width: 14px;
+}
+
+.deliver-way-option p {
+  font-family: "Suprema";
+  text-transform: none;
 }
 
 img {
@@ -2224,10 +2233,6 @@ img {
   font-family: "Suprema";
   font-weight: 300;
   margin: 5px 0;
-}
-
-.items-selected ::-webkit-input-placeholder {
-  color: #b4b3b3;
 }
 
 .items-selected ol {
@@ -2299,6 +2304,9 @@ img {
 }
 
 @media (min-width: 992px) {
+  .delivery-container {
+    margin: 0;
+  }
   .delivery-container h1 {
     font-size: 24px;
   }
@@ -2315,6 +2323,34 @@ img {
   }
   .link-to-previous-page p {
     font-size: 16px;
+  }
+  .delivery-way ul li {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30px 88px 600px 20% 35%;
+        grid-template-columns: 30px 88px 600px 20% 35%;
+    height: 80px;
+  }
+  .delivery-way ul li img {
+    width: auto;
+    height: 50px;
+    margin: 0 18px;
+  }
+  .delivery-way label::before {
+    top: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .delivery-way-option {
+    height: auto;
+    margin-left: 36px;
+  }
+  .delivery-way-option p {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .delivery-way-price {
+    background-color: #000;
   }
   .promo-code-input > div {
     width: 50%;
@@ -2337,6 +2373,23 @@ img {
     width: 40%;
     height: 48px;
     margin: 0;
+    background-color: #f0eeee;
+    color: #363636;
+    font-size: 22px;
+    font-family: "Suprema";
+    padding: 8px;
+  }
+  .promo-code-input input::-webkit-input-placeholder {
+    color: #b4b3b3;
+  }
+  .promo-code-input input:-ms-input-placeholder {
+    color: #b4b3b3;
+  }
+  .promo-code-input input::-ms-input-placeholder {
+    color: #b4b3b3;
+  }
+  .promo-code-input input::placeholder {
+    color: #b4b3b3;
   }
   .promo-code-input button {
     background-color: #6cda00;
@@ -2720,52 +2773,6 @@ a {
 
 .item-box-on-hover {
   display: none;
-}
-
-.item-box:hover {
-  border-color: #6cda00;
-}
-
-.item-box:hover .item-box-on-hover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 84%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(108, 218, 0, 0.8);
-  z-index: 100;
-}
-
-.item-box:hover .item-box-on-hover button {
-  width: 80%;
-  height: 40px;
-  background-color: #ffffff;
-  margin: 24px auto 18px auto;
-}
-
-.item-box:hover .item-box-on-hover button a {
-  color: #6cda00;
-  font-family: "Suprema - Semi Bold";
-  font-size: 20px;
-}
-
-.item-box:hover .item-name-price {
-  color: white;
-  background-color: #6cda00;
-}
-
-.item-box:hover .top-product-price p {
-  color: #ffffff;
 }
 
 .item-image {
@@ -3688,6 +3695,46 @@ label:before {
   }
   .section-banner-container {
     display: none !important;
+  }
+  .item-box:hover {
+    border-color: #6cda00;
+  }
+  .item-box:hover .item-box-on-hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 84%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(108, 218, 0, 0.8);
+    z-index: 100;
+  }
+  .item-box:hover .item-box-on-hover button {
+    width: 80%;
+    height: 40px;
+    background-color: #ffffff;
+    margin: 24px auto 18px auto;
+  }
+  .item-box:hover .item-box-on-hover button a {
+    color: #6cda00;
+    font-family: "Suprema - Semi Bold";
+    font-size: 20px;
+  }
+  .item-box:hover .item-name-price {
+    color: white;
+    background-color: #6cda00;
+  }
+  .item-box:hover .top-product-price p {
+    color: #ffffff;
   }
   /*Section Blog */
   .section-blog-container {

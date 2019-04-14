@@ -381,32 +381,6 @@
         display: none;
     }
 
-    .promo-code-input>div {
-        width: 50%;
-        display: inline-flex;
-    }
-
-    .promo-code-input {
-        display: flex;
-        justify-content: space-between;
-        height: 48px;
-        margin: 24px 0;
-
-        input {
-            border: 2px solid $light-green;
-            width: 40%;
-            height: 48px;
-            margin: 0;
-        }
-
-        button {
-            background-color: $light-green;
-            width: 40%;
-            color: $primary-white;
-            font-size: 18px;
-        }
-    }
-
     .final-price,
     .final-price-with-code {
         margin: 30px 0;
