@@ -2182,15 +2182,15 @@ ul.similiar-items-list {
 .delivery-way ul li {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto 50% 20%;
-      grid-template-columns: auto auto 50% 20%;
+  -ms-grid-columns: 10px auto 50% 20%;
+      grid-template-columns: 10px auto 50% 20%;
   height: 48px;
 }
 
 .delivery-way ul li img {
   width: 48px;
   height: auto;
-  margin: 0 6px;
+  margin: 0 auto;
 }
 
 .delivery-way label {
@@ -2243,20 +2243,17 @@ img {
 .items-selected ol li {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto 60% 20%;
-      grid-template-columns: auto auto 60% 20%;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-grid-columns: 10px auto 50% 20%;
+      grid-template-columns: 10px auto 50% 20%;
+  height: 60px;
   margin: 10px auto;
+  border: 1px solid black;
 }
 
 .items-selected ol li img {
-  width: 90%;
+  width: 54px;
   height: auto;
+  margin: 0 auto;
 }
 
 .items-selected ol li a {
@@ -2270,6 +2267,7 @@ img {
   font-weight: 400;
   color: #363636;
   font-family: "Suprema - Semi Bold";
+  font-size: 18px;
 }
 
 .items-selected .promo-code-input button {
@@ -2324,11 +2322,18 @@ img {
   .link-to-previous-page p {
     font-size: 16px;
   }
+  .items-selected ol li {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30px 120px 600px auto;
+        grid-template-columns: 30px 120px 600px auto;
+    height: 80px;
+  }
   .delivery-way ul li {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 30px 88px 600px 20% 35%;
-        grid-template-columns: 30px 88px 600px 20% 35%;
+    -ms-grid-columns: 30px 120px 600px auto;
+        grid-template-columns: 30px 120px 600px auto;
     height: 80px;
   }
   .delivery-way ul li img {
@@ -2341,16 +2346,17 @@ img {
     width: 20px;
     height: 20px;
   }
+  .item-name-variant,
   .delivery-way-option {
     height: auto;
-    margin-left: 36px;
   }
+  .item-name-variant p,
   .delivery-way-option p {
     font-size: 16px;
     line-height: 16px;
   }
   .delivery-way-price {
-    background-color: #000;
+    border: 1px solid black;
   }
   .promo-code-input > div {
     width: 50%;
