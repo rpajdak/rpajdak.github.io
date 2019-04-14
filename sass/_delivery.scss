@@ -160,11 +160,12 @@ img {
     font-family: $semi-bold;
     font-size: 10px;
 }
-.div-hidden-on-mobile {
+.promo-code-input:first-child{
     display: none;
 }
 
 .promo-code-input {
+    margin: 24px 0;
     div {
         width: 100%;
     }
@@ -339,9 +340,6 @@ img {
             font-size: 16px;
         }
     }
-    .div-hidden-on-mobile {
-        display: block;
-    }
 
     .promo-code-input>div {
         width: 50%;
@@ -377,5 +375,9 @@ img {
             color: $primary-white;
             font-size: 18px;
         }
+    }
+    .btn{
+        width: 50%;
+        margin: 12px auto;
     }
 }
