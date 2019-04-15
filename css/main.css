@@ -2658,10 +2658,6 @@ button.hamburger-menu-icon {
   z-index: 2;
 }
 
-.hidden {
-  display: none;
-}
-
 .hamburger-menu-icon-visible {
   background-color: transparent;
   border: none;
@@ -3464,6 +3460,9 @@ label:before {
     height: auto;
   }
   /* Navigation on desktop */
+  .hidden {
+    display: none;
+  }
   .navigation-desktop {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3479,74 +3478,53 @@ label:before {
     left: 0;
     background: #6cda00;
   }
-  .main {
+  .navigation-desktop li {
     position: relative;
-    list-style: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 1200px;
-    margin: auto 20px;
-    z-index: 999;
+    width: 240px;
+    height: 48px;
+    text-align: center;
+    cursor: pointer;
   }
-  .main a {
+  .navigation-desktop a {
     font-weight: 400;
     font-family: "Suprema";
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 48px;
   }
-  .main li {
-    position: relative;
-    width: 20%;
-    height: 50%;
-    padding: 15px 0;
-    cursor: pointer;
-    text-align: center;
+  .navigation-desktop-container li:first-child:hover .hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .drop {
-    overflow: hidden;
-    list-style: none;
-    position: absolute;
-    padding: 0;
-    width: 100%;
-    left: 0;
-    top: 35px;
-    margin-top: 15px;
+  .hidden:hover .hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .drop a {
-    font-size: 12px;
-  }
-  .drop div {
-    -webkit-transform: translate(0, -150%);
-    transform: translate(0, -150%);
-    -webkit-transition: all 0.5s 0.1s;
-    transition: all 0.5s 0.1s;
-    position: relative;
+  .hidden {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     background-color: rgba(108, 218, 0, 0.7);
-    margin-top: 13px;
-    padding: 5px;
-    height: 170px;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+    top: 50px;
+    width: 240px;
   }
-  .drop li {
-    display: block;
-    padding: 6px;
+  .hidden li {
+    margin: 6px 0;
+    text-align: start !important;
     width: 100%;
-    height: 40px;
+    height: 24px;
   }
-  .main:hover {
-    z-index: 1001;
-  }
-  .main li:first-child:hover ul div {
-    z-index: 103;
-    -webkit-transform: translate(0, 10px);
-    transform: translate(0, 10px);
+  .hidden li a {
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: 6px;
   }
   /* Section banner */
   .slider-top-product {
