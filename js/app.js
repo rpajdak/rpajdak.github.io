@@ -116,26 +116,32 @@ function highlightSize() {
 
 /*Increment and Decrement value in quantity input */
 function changeQuantity() {
-    const arrowInc = document.getElementById("inc-button");
-    const arrowDec = document.getElementById("dec-button");
-    let quantityInputValue = document.getElementById("input-quantity").value;
-    let quantityInput = document.getElementById("input-quantity");
+    const arrowInc = document.getElementsByClassName("inc-button");
+    const arrowDec = document.getElementsByClassName("dec-button");
+    let quantityInput = document.getElementsByClassName("input-quantity");
 
-    arrowInc.addEventListener("click", () => {
-        if (quantityInputValue > 49) {
-            return;
-        } else {
-            quantityInputValue++;
-            quantityInput.value = quantityInputValue;
-        }
-    });
-    arrowDec.addEventListener("click", () => {
-        if (quantityInputValue <= 0) {
-            return;
-        } else {
-            quantityInputValue--;
-            quantityInput.value = quantityInputValue;
-        }
 
-    })
+    for (let i = 0; i < arrowInc.length; i++) {
+        arrowInc[i].addEventListener("click", () => {
+            let quantityInputValue = quantityInput[i].value;
+            if (quantityInputValue > 49) {
+                return;
+            } else {
+                quantityInputValue++;
+                quantityInput[i].value = quantityInputValue;
+            }
+        })
+    };
+    for (let i = 0; i < arrowDec.length; i++) {
+        arrowDec[i].addEventListener("click", () => {
+            let quantityInputValue = quantityInput[i].value;
+            if (quantityInputValue <= 0) {
+                return;
+            } else {
+                 quantityInputValue--;
+                 quantityInput[i].value = quantityInputValue;
+            }
+
+        })
+    }
 }

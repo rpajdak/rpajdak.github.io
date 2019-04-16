@@ -233,6 +233,10 @@ img.pointer {
   font-size: 9px;
 }
 
+.rules-text span p {
+  font-family: "Suprema - Semi Bold";
+}
+
 .rules-text .rulespage-back-btn {
   display: none;
 }
@@ -267,6 +271,9 @@ img.pointer {
     text-transform: none;
     font-size: 18px;
     font-family: "Suprema - Semi Bold";
+  }
+  .rules-text p {
+    font-size: 14px;
   }
   .rulespage-back-btn {
     width: 30%;
