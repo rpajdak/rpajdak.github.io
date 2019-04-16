@@ -13,23 +13,23 @@
     <header>
         <div class="header-container">
             <div class="header-logo">
-                <a href="../../index.html"><img src="../../img/header/logo.png" alt="Whatgeekneeds logo"></a>
+                <a href="index.html"><img src="img/header/logo.png" alt="Whatgeekneeds logo"></a>
             </div>
             <div class="header-user-login">
                 <a href="#">
-                    <img src="../../img/header/my_account.png" class="user-icon-image" alt="User icon">
+                    <img src="img/header/my_account.png" class="user-icon-image" alt="User icon">
                     <p>moje konto</p>
                 </a>
                 <div class="price-basket">
                     <input type="text" id="name" placeholder="00,00 PLN">
-                    <button type="button"><img src="../../img/header/koszyk_kopia.png" alt=""> Koszyk</button>
+                    <button type="button"><img src="img/header/koszyk_kopia.png" alt=""> Koszyk</button>
                 </div>
-                <button class="hamburger-menu-icon"><img src="/img/header/hamburger.png" alt="Hamburger menu icon">
+                <button class="hamburger-menu-icon"><img src="img/header/hamburger.png" alt="Hamburger menu icon">
                 </button>
             </div>
             <div class="header-search-form">
                 <input type="text" id="name" placeholder="Czego szukasz?">
-                <button type="button"><img src="/img/header/search-icon.png" alt=""> Szukaj</button>
+                <button type="button"><img src="img/header/search-icon.png" alt=""> Szukaj</button>
             </div>
         </div>
         <nav class="navigation">
@@ -38,13 +38,13 @@
                     <img src="/img/header/nav/user-icon.png" class="user-icon-image" alt="User icon">
                     <h3>moje konto</h3>
                 </a>
-                <button><img class="hamburger-menu-icon-visible" src="/img/header/nav/circle.svg"
+                <button><img class="hamburger-menu-icon-visible" src="img/header/nav/circle.svg"
                         alt="Hamburger menu icon"></a>
             </div>
             <div class="navigation-list">
                 <ul>
                     <li><a href="../../all-items.html">Wszystkie produkty</a>
-                        <button><img src="/img/header/nav/cross.png" class="navigation-list-plus"
+                        <button><img src="img/header/nav/cross.png" class="navigation-list-plus"
                                 alt="White cross"></button>
 
                         <ul class="navigation-list-products hidden">
@@ -63,23 +63,23 @@
                 </ul>
             </div>
         </nav>
-        <nav class="navigation-desktop">
-            <ul class="main">
-                <li><a href="all-items.html">Wszystkie produkty</a>
-                    <ul class="drop">
-                        <div>
+        <nav>
+            <div class="navigation-desktop-container">
+                <ul class="navigation-desktop">
+                    <li><a href="all-items.html">Wszystkie produkty</a>
+                        <ul class=" hidden">
                             <li><a href="#">Gadżety antystresowe</a></li>
                             <li><a href="#">Kubki</a></li>
                             <li><a href="#">shirty</a></li>
                             <li><a href="#">Skarpety</a></li>
-                        </div>
-                    </ul>
-                </li>
-                <li><a href="#">Nowości</a></li>
-                <li><a href="#">Promocje</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="contact.html">Kontakt</a></li>
-            </ul>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nowości</a></li>
+                    <li><a href="#">Promocje</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section>
@@ -109,10 +109,10 @@
                     <p>Dostawa już od 10 PLN</p>
                     <label for="quantity">Ilość</label>
                     <div class="input-for-quantity">
-                        <input type="number" value="1" min="0" max="50" id="input-quantity" />
-                        <div id="inc-button" class="spinner-button"><img src="../../img/items/arrow-inc.png"
+                        <input type="number" value="1" min="0" max="50" class="input-quantity" />
+                        <div id="inc-button" class="inc-button spinner-button"><img src="../../img/items/arrow-inc.png"
                                 alt="Arrow Increment"></div>
-                        <div id="dec-button" class="spinner-button"><img src="../../img/items/arrow-dec.png"
+                        <div id="dec-button" class="dec-button spinner-button"><img src="../../img/items/arrow-dec.png"
                                 alt="Arrow Decrement"></div>
                     </div>
                 </div>
