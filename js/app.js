@@ -22,6 +22,7 @@ hamburderBtn.addEventListener("click", openNav);
 const plusBtn = document.querySelector(".navigation-list-plus");
 const productList = document.querySelector(".navigation-list-products");
 let rotateDeg = 90;
+console.log(productList);
 plusBtn.addEventListener("click", () => {
     productList.classList.toggle("hidden");
     // plusBtn.style.transform = "rotate(" + rotateDeg + "deg)";

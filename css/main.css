@@ -2773,6 +2773,10 @@ button.hamburger-menu-icon {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .navigation {
   display: block;
   position: absolute;
