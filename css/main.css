@@ -1806,7 +1806,7 @@ ul.similiar-items-list {
     width: 30%;
   }
   .trash-icon {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: -webkit-box;
     display: -ms-flexbox;

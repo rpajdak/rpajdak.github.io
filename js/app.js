@@ -22,7 +22,6 @@ hamburderBtn.addEventListener("click", openNav);
 const plusBtn = document.querySelector(".navigation-list-plus");
 const productList = document.querySelector(".navigation-list-products");
 let rotateDeg = 90;
-console.log(productList);
 plusBtn.addEventListener("click", () => {
     productList.classList.toggle("hidden");
     // plusBtn.style.transform = "rotate(" + rotateDeg + "deg)";
@@ -143,6 +142,19 @@ function changeQuantity() {
                  quantityInput[i].value = quantityInputValue;
             }
 
+        })
+    }
+}
+
+/* Removing item from basket */
+function removeItem () {
+    const trashImage = document.getElementsByClassName("trash-image");
+    let selectedItem = document.getElementsByClassName("selected-item");
+    console.log(selectedItem);
+    for (let i = 0; i< trashImage.length; i++){
+        trashImage[i].addEventListener("click", () =>{
+            selectedItem[i].style.display = "none";
+            selectedItem[i].innerHTML = "";
         })
     }
 }

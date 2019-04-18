@@ -362,11 +362,10 @@
     }
 
     .trash-icon {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         display: flex;
         justify-content: flex-end;
-
         img {
             width: 30px !important;
             height: 30px;
