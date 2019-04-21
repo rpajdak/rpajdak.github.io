@@ -122,9 +122,11 @@
     }
 
 }
+
 .in-stock {
     display: none;
 }
+
 .item-description-container {
 
     p {
@@ -350,6 +352,10 @@ ul.similiar-items-list {
             grid-area: first-btn;
             display: flex;
             align-items: flex-end;
+
+            button {
+                width: 50%;
+            }
         }
 
         .item-price {
@@ -397,6 +403,7 @@ ul.similiar-items-list {
             position: relative;
             height: 50px;
             padding: 0;
+
             img {
                 width: 50%;
                 height: auto;
@@ -525,16 +532,18 @@ ul.similiar-items-list {
         .similiar {
             grid-area: similiar;
 
-            p { 
+            p {
                 font-size: 24px;
                 margin: 12px 0;
             }
         }
-        .item-name-price{
-            p{
+
+        .item-name-price {
+            p {
                 font-size: 35px;
             }
         }
+
         ul.similiar-items-list {
             grid-template-columns: repeat(4, 24%);
             justify-content: space-between;

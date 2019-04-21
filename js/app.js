@@ -150,7 +150,9 @@ function changeQuantity() {
 function removeItem () {
     const trashImage = document.getElementsByClassName("trash-image");
     let selectedItem = document.getElementsByClassName("selected-item");
-    console.log(selectedItem);
+    let itemPrice = document.getElementsByClassName("price-value");
+    
+    console.log(itemPrice[1].innerText);
     for (let i = 0; i< trashImage.length; i++){
         trashImage[i].addEventListener("click", () =>{
             selectedItem[i].style.display = "none";

@@ -674,6 +674,9 @@ ul.similiar-items-list {
         -ms-flex-align: end;
             align-items: flex-end;
   }
+  .first-btn button {
+    width: 50%;
+  }
   .item-price {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
