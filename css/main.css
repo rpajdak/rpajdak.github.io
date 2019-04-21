@@ -3202,7 +3202,7 @@ a {
 
 .newsletter-input {
   width: 90%;
-  height: 20%;
+  height: 48px;
   -webkit-box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.1);
           box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.1);
   background-color: #a7e966;
@@ -4013,6 +4013,9 @@ label:before {
     font-size: 20px;
     margin-left: 0;
     padding-left: 24px;
+  }
+  .newsletter-btn button {
+    height: 48px;
   }
   .newsletter-bok {
     display: -webkit-box;

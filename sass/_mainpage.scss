@@ -476,7 +476,7 @@ a {
 
 .newsletter-input {
     width: 90%;
-    height: 20%;
+    height: 48px;
     box-shadow: inset 3px 4px 5px rgba(0, 0, 0, 0.1);
     background-color: $newsletter-input-bgcol;
     font-family: $secondary-font;
@@ -538,6 +538,7 @@ label:before {
     font-size: 10px;
     line-height: 15px;
 }
+
 
 /* Section footer */
 
@@ -1274,7 +1275,11 @@ label:before {
         margin-left: 0;
         padding-left: 24px;
     }
-
+    .newsletter-btn{
+        button{
+            height: 48px;
+        }
+    }
     .newsletter-bok {
         display: flex;
         flex-direction: column;
@@ -1349,35 +1354,4 @@ label:before {
     .footer-container {
         display: none;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
