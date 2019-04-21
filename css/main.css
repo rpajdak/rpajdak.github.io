@@ -3051,6 +3051,10 @@ a {
   height: 50px;
 }
 
+.products-list-text {
+  display: none;
+}
+
 .products-sliders {
   display: none;
 }
